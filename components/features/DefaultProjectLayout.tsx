@@ -58,7 +58,7 @@ export function DefaultProjectLayout({ project }: DefaultProjectLayoutProps) {
                 href={project.links.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 text-sm uppercase tracking-wider hover:opacity-90 transition-opacity"
+                className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 text-xs uppercase tracking-wider hover:opacity-90 transition-opacity"
               >
                 <Github className="w-4 h-4" />
                 View Repository
