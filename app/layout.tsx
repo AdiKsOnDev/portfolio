@@ -87,6 +87,12 @@ export const metadata: Metadata = {
   title: "Adil | Full-Stack Engineer",
   description:
     "Full-Stack Engineer @ Sentiment.AI - Building systems with precision and intent.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
+    ],
+  },
 };
 
 export default function RootLayout({
