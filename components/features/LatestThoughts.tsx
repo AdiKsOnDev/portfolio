@@ -27,7 +27,7 @@ export function LatestThoughts() {
               {posts.map((post) => (
                 <Link
                   key={post.slug}
-                  href={"/blog/${post.slug}"}
+                  href={`/blog/${post.slug}`}
                   className="group block"
                   onMouseEnter={() => setHoveredPost(post)}
                   onMouseLeave={() => setHoveredPost(null)}
@@ -47,7 +47,7 @@ export function LatestThoughts() {
           </FadeIn>
 
           <FadeIn delay={200}>
-            <div className="bg-card border border-muted-border overflow-hidden transition-all duration-300 hover:border-accent/50">
+            <div className="bg-card border border-muted-border overflow-hidden transition-all duration-300">
               <div className="aspect-square relative">
                 {posts.map((post) => (
                   <img

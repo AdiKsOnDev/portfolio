@@ -43,7 +43,7 @@ export function FeaturedArticle({ post }: FeaturedArticleProps) {
                 {post.excerpt}
               </p>
               <Link
-                href={"/blog/${post.slug}"}
+                href={`/blog/${post.slug}`}
                 className="inline-flex items-center gap-2 text-accent text-sm font-sans uppercase tracking-wider hover:underline transition-all duration-300"
               >
                 Read Transcript

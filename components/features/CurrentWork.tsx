@@ -55,7 +55,7 @@ export function CurrentWork() {
           </FadeIn>
 
           <FadeIn delay={200}>
-            <div className="bg-card border border-muted-border overflow-hidden transition-all duration-300 hover:border-accent/50">
+            <div className="bg-card border border-muted-border overflow-hidden transition-all duration-300">
               {project.image ? (
                 <img
                   src={project.image}

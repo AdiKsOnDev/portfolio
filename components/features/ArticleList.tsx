@@ -14,7 +14,7 @@ export function ArticleList({ posts }: ArticleListProps) {
       {posts.map((post, i) => (
         <FadeIn key={post.slug} delay={i * 100}>
           <Link
-            href={"/blog/${post.slug}"}
+            href={`/blog/${post.slug}`}
             className="group flex gap-6 items-start transition-all duration-300"
           >
             <div className="flex-1">

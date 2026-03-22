@@ -10,7 +10,7 @@ function ProjectCard({ project, delay }: { project: Project; delay: number }) {
   return (
     <FadeIn delay={delay}>
       <Link
-        href={"/projects/${getProjectSlug(project)}"}
+        href={`/projects/${getProjectSlug(project)}`}
         className="group block bg-card border border-muted-border p-6 hover:border-accent/50 transition-all duration-300"
       >
         <div className="flex items-start justify-between mb-4">
@@ -41,7 +41,7 @@ function FeaturedProjectCard({ project, delay }: { project: Project; delay: numb
   return (
     <FadeIn delay={delay}>
       <Link
-        href={"/projects/${getProjectSlug(project)}"}
+        href={`/projects/${getProjectSlug(project)}`}
         className="group lg:col-span-2 bg-muted border border-muted-border p-8 flex flex-col lg:flex-row gap-8 items-start hover:border-accent/50 transition-all duration-300"
       >
         <div className="flex-1">
