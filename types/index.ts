@@ -127,4 +127,5 @@ export interface GitHubCommit {
   message: string;
   branch: string;
   timestamp: string;
+  url: string;
 }

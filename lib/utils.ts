@@ -17,3 +17,26 @@ export function slugify(text: string): string {
     .replace(/\s+/g, "-")
     .replace(/[^\w-]+/g, "");
 }
+
+export interface Heading {
+  id: string;
+  text: string;
+  level: number;
+}
+
+export function extractHeadings(content: string): Heading[] {
+  const headingRegex = /^(#{2,3})\s+(.+)$/gm;
+  const headings: Heading[] = [];
+  let index = 0;
+
+  let match;
+  while ((match = headingRegex.exec(content)) !== null) {
+    const level = match[1].length;
+    const text = match[2].trim();
+    const id = slugify(text);
+    headings.push({ id, text, level });
+    index++;
+  }
+
+  return headings;
+}
