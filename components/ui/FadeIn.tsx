@@ -18,7 +18,11 @@ export function FadeIn({ children, delay = 0, className = "" }: FadeInProps) {
 
   return (
     <div
-      className={`transition-opacity duration-500 ${isVisible ? "opacity-100" : "opacity-0"} ${className}`}
+      className={`transition-all duration-500 ease-out ${className} ${
+        isVisible
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 -translate-y-4"
+      }`}
     >
       {children}
     </div>
