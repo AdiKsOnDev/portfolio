@@ -91,7 +91,7 @@
       "title": "linear-cli",
       "description": "CLI automation tool for Linear Issue Tracker with comprehensive GraphQL API integration, available on PyPI and AUR.",
       "longDescription": "A high-performance command-line interface for Linear Issue Tracker that streamlines project management workflows. Built with Python and GraphQL, featuring robust CI/CD pipelines, semantic versioning, and comprehensive test coverage. Achieves sub-2-second response times for complex queries and supports all major Linear operations including issue management, team coordination, and project tracking.",
-      "image": "https://linear.app/static/release/meta.png",
+      "image": "https://i.ibb.co/WNTdwwQy/Slide-16-9-5-2.png",
       "tags": [
         "Python",
         "GraphQL",
