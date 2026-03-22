@@ -5,7 +5,7 @@
       "title": "StarComp",
       "description": "Modern tiling Wayland compositor built in Rust using the Smithay library for high-performance window management.",
       "longDescription": "StarComp is a cutting-edge tiling Wayland compositor written in Rust, leveraging the powerful Smithay library for low-level Wayland protocol implementation. Designed for efficiency and customization, it provides a blazingly fast window management experience with minimal resource usage. Features include dynamic tiling layouts, keyboard-driven workflow, and extensive configuration options. Built with memory safety and performance in mind, utilizing Rust's zero-cost abstractions and ownership system to deliver a compositor that's both reliable and lightning-fast.",
-      "image": "https://www.developer-tech.com/wp-content/uploads/2021/02/rust-foundation-programming-language-development-developer.jpg",
+      "image": "https://i.ibb.co/6cBGrwQD/Slide-16-9-5.png",
       "tags": [
         "Rust",
         "Wayland",
