@@ -1,0 +1,14 @@
+{
+  "id": "TODO: Add unique ID (e.g., 1, 2, 3)",
+  "title": "TODO: Add your blog post title",
+  "slug": "TODO: Add URL-friendly slug (e.g., my-awesome-blog-post)",
+  "excerpt": "TODO: Add a brief 1-2 sentence summary of your blog post",
+  "coverImage": "TODO: Add cover image URL (use Unsplash or your own image)",
+  "publishedAt": "TODO: Add publish date in YYYY-MM-DD format (e.g., 2025-12-10)",
+  "readTime": "TODO: Add estimated read time (e.g., 5 min read, 10 min read)",
+  "category": "TODO: Add category (e.g., TypeScript, React, Backend, DevOps, etc.)",
+  "tags": ["TODO: Add tag 1", "TODO: Add tag 2", "TODO: Add tag 3"],
+  "author": "Adil Alizada",
+  "featured": false,
+  "content": "# TODO: Add Your Blog Title Here\n\nTODO: Write your introduction paragraph here. Explain what the blog post is about and what readers will learn.\n\n## Section 1: TODO: Add Section Title\n\nTODO: Write your content here. You can use markdown formatting:\n\n- **Bold text** for emphasis\n- *Italic text* for subtle emphasis\n- `inline code` for code snippets\n- [Links](https://example.com) to external resources\n\n### Subsection 1.1\n\nTODO: Add more detailed content here.\n\n```typescript\n// TODO: Add code examples\nfunction example() {\n  console.log('Hello, World!');\n}\n```\n\n## Section 2: TODO: Add Another Section\n\nTODO: Continue your content here.\n\n### Key Points\n\n- TODO: Add bullet point 1\n- TODO: Add bullet point 2\n- TODO: Add bullet point 3\n\n## Section 3: TODO: Add More Sections\n\nTODO: Add more sections as needed.\n\n### Code Example\n\n```javascript\n// TODO: Add relevant code examples\nconst myVariable = 'example';\nconsole.log(myVariable);\n```\n\n## Conclusion\n\nTODO: Summarize the key takeaways from your blog post. What should readers remember?\n\n### Key Takeaways:\n\n- ✅ TODO: Add takeaway 1\n- ✅ TODO: Add takeaway 2\n- ✅ TODO: Add takeaway 3\n\n## Resources\n\nTODO: Add links to helpful resources (optional):\n\n- [Resource 1](https://example.com)\n- [Resource 2](https://example.com)\n- [Resource 3](https://example.com)\n"
+}

@@ -1,0 +1,38 @@
+{
+  "posts": [
+    {
+      "id": "1771440238111",
+      "slug": "commit-committed-or-was-committed",
+      "title": "Commit, Committed, or was Committed?",
+      "excerpt": "All the ways I have written my commits and the compromises I found",
+      "coverImage": "https://i.ibb.co/Ng5T3ZFG/Slide-16-9-4.png",
+      "publishedAt": "2026-02-18",
+      "readTime": "4 min read",
+      "category": "Development",
+      "tags": [
+        "Git",
+        "Automation",
+        "Version Control"
+      ],
+      "author": "Adil Alizada",
+      "featured": false
+    },
+    {
+      "id": "1765381538990",
+      "slug": "genai-is-supposed-to-be-convenient",
+      "title": "GenAI is Stealing Our Art",
+      "excerpt": "LLMs were made to do our laundry and write documentation, but nowadays all we do is do laundry and write documentation.",
+      "coverImage": "https://i.ibb.co/gMm1R8Q0/Slide-16-9-1.png",
+      "publishedAt": "2025-12-10",
+      "readTime": "1 min read",
+      "category": "Artificial Intelligence (AI)",
+      "tags": [
+        "GenAI",
+        "Programming",
+        "Chores"
+      ],
+      "author": "Adil Alizada",
+      "featured": false
+    }
+  ]
+}

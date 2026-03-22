@@ -1,0 +1,282 @@
+{
+  "projects": [
+  {
+      "id": "0",
+      "title": "StarComp",
+      "description": "Modern tiling Wayland compositor built in Rust using the Smithay library for high-performance window management.",
+      "longDescription": "StarComp is a cutting-edge tiling Wayland compositor written in Rust, leveraging the powerful Smithay library for low-level Wayland protocol implementation. Designed for efficiency and customization, it provides a blazingly fast window management experience with minimal resource usage. Features include dynamic tiling layouts, keyboard-driven workflow, and extensive configuration options. Built with memory safety and performance in mind, utilizing Rust's zero-cost abstractions and ownership system to deliver a compositor that's both reliable and lightning-fast.",
+      "image": "https://www.developer-tech.com/wp-content/uploads/2021/02/rust-foundation-programming-language-development-developer.jpg",
+      "tags": [
+        "Rust",
+        "Wayland",
+        "Smithay",
+        "Compositor",
+        "Linux",
+        "Tiling WM"
+      ],
+      "category": "Linux",
+      "status": "in-progress",
+      "year": 2025,
+      "client": "Open Source",
+      "duration": "Ongoing",
+      "role": "Creator & Maintainer",
+      "links": {
+      },
+      "metrics": {
+        "users": "In Development",
+        "performance": "N/A",
+        "impact": "N/A"
+      }
+    },
+    {
+      "id": "1",
+      "title": "Monoland",
+      "description": "Monochromatic Wayland desktop shell built with QML for Hyprland.",
+      "longDescription": "Monoland is a monochromatic rice for Hyprland built mostly in QML. It replaces every standard desktop shell component with custom-built alternatives: a status bar with workspaces, clock popup, and OSD toasts; a notification sidebar with a Material-style card list, media player, and toggle controls; a full-screen app launcher with live search, icon resolution, and keyboard navigation; a power menu; and a native Wayland lockscreen using WlSessionLock with PAM authentication, a widget grid showing clock, calendar, media, weather, battery, and uptime. Every component follows a strict monochromatic design language using pywal-generated color tokens, Poppins for UI text, and JetBrainsMono Nerd Font for icons.",
+      "image": "https://i.ibb.co/0ydcqpLQ/646-1x-shots-so.jpg",
+      "tags": [
+        "QML",
+        "Quickshell",
+        "Hyprland",
+        "Wayland",
+        "Linux",
+        "Desktop Shell",
+        "Ricing"
+      ],
+      "category": "Linux",
+      "status": "completed",
+      "year": 2026,
+      "client": "Open Source",
+      "duration": "1 week",
+      "role": "Creator & Maintainer",
+      "links": {
+      },
+      "metrics": {
+        "users": "In Development",
+        "performance": "<1 GB RAM usage",
+        "impact": "~5 Stars"
+      }
+    },
+    {
+      "id": "2",
+      "title": "Dashboard Portfolio",
+      "description": "Modern, dashboard-style portfolio template built with Next.js 15, TypeScript, and shadcn/ui for showcasing projects and experience.",
+      "longDescription": "A fully customizable portfolio template featuring a clean dashboard-style interface with JSON-driven content management. Built with modern web technologies including Next.js 15, TypeScript, Tailwind CSS, and shadcn/ui components. Features include dark/light mode, responsive design, blog support with markdown rendering, and a development-only blog maker tool. All content is managed through organized JSON files, making it easy to customize without touching code. Includes comprehensive documentation, reusable components, and follows best practices for type safety and code organization.",
+      "image": "https://github.com/user-attachments/assets/071faa75-e057-4148-bd1b-7e9aff01a5e9",
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "React",
+        "Tailwind CSS",
+        "shadcn/ui",
+        "Portfolio"
+      ],
+      "category": "Web Development",
+      "status": "completed",
+      "year": 2025,
+      "client": "Open Source",
+      "duration": "<1 Month",
+      "role": "Creator & Maintainer",
+      "links": {
+        "github": "https://github.com/AdiKsOnDev/dashboard"
+      },
+      "metrics": {
+        "users": "Template",
+        "performance": "<10 MB build",
+        "impact": "~5 Stars"
+      }
+    },
+    {
+      "id": "2",
+      "title": "linear-cli",
+      "description": "CLI automation tool for Linear Issue Tracker with comprehensive GraphQL API integration, available on PyPI and AUR.",
+      "longDescription": "A high-performance command-line interface for Linear Issue Tracker that streamlines project management workflows. Built with Python and GraphQL, featuring robust CI/CD pipelines, semantic versioning, and comprehensive test coverage. Achieves sub-2-second response times for complex queries and supports all major Linear operations including issue management, team coordination, and project tracking.",
+      "image": "https://linear.app/static/release/meta.png",
+      "tags": [
+        "Python",
+        "GraphQL",
+        "CLI",
+        "Linear API",
+        "PyPI",
+        "AUR"
+      ],
+      "category": "Developer Tools",
+      "status": "completed",
+      "year": 2025,
+      "client": "Open Source",
+      "duration": "2 weeks",
+      "role": "Creator & Maintainer",
+      "links": {
+        "github": "https://github.com/AdiKsOnDev/linear-cli"
+      },
+      "metrics": {
+        "users": "5 stars",
+        "performance": "<2s response time",
+        "impact": "Published on PyPI & AUR"
+      }
+    },
+    {
+      "id": "3",
+      "title": "Ontology Database Layer",
+      "description": "Scalable database infrastructure for enterprise ontology management, handling 1M+ records for client integration.",
+      "longDescription": "Built the foundational database layer for SentimentAI's ontology system. An ontology is a structured framework that defines relationships between concepts and entities. This system enables seamless integration of new clients into the company's project ecosystem by providing a robust, scalable data model that handles complex hierarchical relationships and supports rapid client onboarding with zero downtime.",
+      "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=800&h=600&fit=crop",
+      "tags": [
+        "Python",
+        "PostgreSQL",
+        "SQLAlchemy",
+        "Database Design",
+        "Ontology"
+      ],
+      "category": "Enterprise Software",
+      "status": "completed",
+      "year": 2025,
+      "client": "SentimentAI LLC",
+      "duration": "3 months",
+      "role": "Full-Stack Engineer",
+      "links": {},
+      "metrics": {
+        "users": "Restricted",
+        "performance": "1M+ records",
+        "impact": "Seamless client integration"
+      }
+    },
+    {
+      "id": "4",
+      "title": "Ontology REST API",
+      "description": "High-performance RESTful API for ontology management with comprehensive endpoints and real-time data access.",
+      "longDescription": "Developed a production-grade FastAPI service that exposes the ontology database through a clean, well-documented REST interface. Implements advanced features including query optimization, caching strategies, authentication, and rate limiting. Supports complex filtering, pagination, and bulk operations while maintaining sub-100ms response times for standard queries.",
+      "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
+      "tags": [
+        "Python",
+        "FastAPI",
+        "REST API",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "category": "Enterprise Software",
+      "status": "completed",
+      "year": 2025,
+      "client": "SentimentAI LLC",
+      "duration": "2 months",
+      "role": "Full-Stack Engineer",
+      "links": {},
+      "metrics": {
+        "users": "Restricted",
+        "performance": "< 100ms response",
+        "impact": "Real-time data access"
+      }
+    },
+    {
+      "id": "5",
+      "title": "OES UI Platform",
+      "description": "Modern TypeScript frontend for the Ontology Excellence System with intuitive data visualization and management.",
+      "longDescription": "Built a comprehensive web application for managing and visualizing ontology data. Features include interactive dashboards, real-time updates, advanced filtering, and bulk operations. Implemented with React, TypeScript, and modern state management, providing a seamless user experience for complex data operations. Includes comprehensive testing, CI/CD integration, and Docker containerization.",
+      "image": "/assets/oes-ui.png",
+      "tags": [
+        "TypeScript",
+        "React",
+        "Docker",
+        "CI/CD",
+        "Frontend"
+      ],
+      "category": "Enterprise Software",
+      "status": "completed",
+      "year": 2025,
+      "client": "SentimentAI LLC",
+      "duration": "4 months",
+      "role": "Full-Stack Engineer",
+      "links": {},
+      "metrics": {
+        "users": "Restricted",
+        "performance": "Real-time updates",
+        "impact": "Intuitive data management"
+      }
+    },
+    {
+      "id": "6",
+      "title": "HyprValley",
+      "description": "Arch Linux rice featuring 5 stunning themes (Space, Nature, Ocean, Sakura, Code-RED) for Hyprland window manager.",
+      "longDescription": "A comprehensive Hyprland configuration with meticulously crafted themes that transform the Linux desktop experience. Each theme includes custom Waybar configurations, color schemes, wallpapers, and system integrations. Gained significant traction in the Linux community with 40 GitHub stars and 200+ upvotes on Reddit, demonstrating strong community appreciation for the aesthetic and functional design.",
+      "image": "/assets/hyprvalley.png",
+      "tags": [
+        "Shell",
+        "CSS",
+        "Hyprland",
+        "Linux",
+        "Waybar",
+        "Rice"
+      ],
+      "category": "Linux",
+      "status": "completed",
+      "year": 2024,
+      "client": "Open Source",
+      "duration": "1 Week",
+      "role": "Creator & Maintainer",
+      "links": {
+        "github": "https://github.com/AdiKsOnDev/HyprValley"
+      },
+      "metrics": {
+        "users": "40 stars",
+        "performance": "200+ Reddit upvotes",
+        "impact": "5 unique themes"
+      }
+    },
+    {
+      "id": "7",
+      "title": "YouTranslate",
+      "description": "AI-powered YouTube video translator with voice cloning capabilities using ElevenLabs API.",
+      "longDescription": "One of my first Python projects that helped me learn the language and AI integration. Takes a YouTube video, clones the speaker's voice, and recreates the video in a different language. Despite being an early project with legacy code, it gained significant community interest with 111 stars and 14 forks, demonstrating the value of the concept. Now archived as a learning milestone.",
+      "image": "https://github.com/AdiKsOnDev/YouTranslate/raw/main/Assets/logo.jpg",
+      "tags": [
+        "Python",
+        "AI",
+        "ElevenLabs",
+        "Voice Cloning",
+        "YouTube API"
+      ],
+      "category": "AI/ML",
+      "status": "archived",
+      "year": 2023,
+      "client": "Open Source",
+      "duration": "2 months",
+      "role": "Creator & Maintainer",
+      "links": {
+        "github": "https://github.com/AdiKsOnDev/YouTranslate"
+      },
+      "metrics": {
+        "users": "111 stars",
+        "performance": "14 forks",
+        "impact": "First Python project"
+      }
+    },
+    {
+      "id": "8",
+      "title": "Gruvtopia",
+      "description": "Hyprland rice with beautiful Gruvbox theme aesthetic for Arch Linux enthusiasts.",
+      "longDescription": "A polished Hyprland configuration featuring the beloved Gruvbox color scheme. Includes custom shell scripts, CSS styling, and carefully curated system integrations that create a cohesive and visually appealing desktop environment. Designed for developers who appreciate the warm, retro aesthetic of Gruvbox while maintaining modern functionality.",
+      "image": "/assets/gruvtopia.png",
+      "tags": [
+        "Shell",
+        "CSS",
+        "Hyprland",
+        "Gruvbox",
+        "Linux"
+      ],
+      "category": "Linux",
+      "status": "completed",
+      "year": 2025,
+      "client": "Open Source",
+      "duration": "6 Hours",
+      "role": "Creator & Maintainer",
+      "links": {
+        "github": "https://github.com/AdiKsOnDev/Gruvtopia"
+      },
+      "metrics": {
+        "users": "Community project",
+        "performance": "Gruvbox theme",
+        "impact": "Complete rice setup"
+      }
+    }
+  ]
+}

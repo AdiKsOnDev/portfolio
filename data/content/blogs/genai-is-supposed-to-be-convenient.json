@@ -1,0 +1,18 @@
+{
+  "id": "1765381538990",
+  "title": "GenAI is Stealing Our Art",
+  "slug": "genai-is-supposed-to-be-convenient",
+  "excerpt": "LLMs were made to do our laundry and write documentation, but nowadays all we do is do laundry and write documentation.",
+  "coverImage": "https://i.ibb.co/gMm1R8Q0/Slide-16-9-1.png",
+  "publishedAt": "2025-12-10",
+  "readTime": "1 min read",
+  "category": "Artificial Intelligence (AI)",
+  "tags": [
+    "GenAI",
+    "Programming",
+    "Chores"
+  ],
+  "author": "Adil Alizada",
+  "featured": false,
+  "content": "Generative Artificial Intelligence (AI) was, and continues to be, built for the purpose of automating our mundane tasks that nobody likes doing. Writing unit tests, making documentation, grammar and spelling, paraphrasing, etc. \n\nBut over the last couple months I found that these chores are the only thing we are left doing, while large language models (LLMs) perform our art. Writing code? Let AI do it. Just write documentation for it and make sure it works. \nLinkedIn posts were supposed to be..who knows what they were supposed to be. These days posts are mostly slop, generated with LLMs to create the illusion of productivity that achieves nothing. \n\nAnd you are a hamster in the wheel of AI. You cannot stop using AI, because the wheel slows rapidly, sending you flying across the room. \nThe art of writing code is slowly becoming the art of prompting, reading and documenting the code. And for some, this new \"art\" halts at prompting.\n"
+}

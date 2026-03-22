@@ -1,0 +1,215 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "Frontend Development",
+      "icon": "code",
+      "skills": [
+        {
+          "name": "React",
+          "level": 95,
+          "yearsOfExperience": 5,
+          "projects": 35
+        },
+        {
+          "name": "Next.js",
+          "level": 90,
+          "yearsOfExperience": 3,
+          "projects": 18
+        },
+        {
+          "name": "TypeScript",
+          "level": 92,
+          "yearsOfExperience": 4,
+          "projects": 28
+        },
+        {
+          "name": "Vue.js",
+          "level": 85,
+          "yearsOfExperience": 3,
+          "projects": 12
+        },
+        {
+          "name": "Tailwind CSS",
+          "level": 95,
+          "yearsOfExperience": 3,
+          "projects": 30
+        },
+        {
+          "name": "HTML/CSS",
+          "level": 98,
+          "yearsOfExperience": 7,
+          "projects": 50
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Backend Development",
+      "icon": "server",
+      "skills": [
+        {
+          "name": "Node.js",
+          "level": 93,
+          "yearsOfExperience": 5,
+          "projects": 32
+        },
+        {
+          "name": "Python",
+          "level": 88,
+          "yearsOfExperience": 4,
+          "projects": 15
+        },
+        {
+          "name": "Django",
+          "level": 82,
+          "yearsOfExperience": 3,
+          "projects": 10
+        },
+        {
+          "name": "Express.js",
+          "level": 94,
+          "yearsOfExperience": 5,
+          "projects": 28
+        },
+        {
+          "name": "GraphQL",
+          "level": 85,
+          "yearsOfExperience": 2,
+          "projects": 8
+        },
+        {
+          "name": "REST APIs",
+          "level": 96,
+          "yearsOfExperience": 5,
+          "projects": 40
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Database & Storage",
+      "icon": "database",
+      "skills": [
+        {
+          "name": "PostgreSQL",
+          "level": 90,
+          "yearsOfExperience": 4,
+          "projects": 22
+        },
+        {
+          "name": "MongoDB",
+          "level": 88,
+          "yearsOfExperience": 4,
+          "projects": 20
+        },
+        {
+          "name": "Redis",
+          "level": 85,
+          "yearsOfExperience": 3,
+          "projects": 15
+        },
+        {
+          "name": "MySQL",
+          "level": 87,
+          "yearsOfExperience": 5,
+          "projects": 18
+        },
+        {
+          "name": "Firebase",
+          "level": 83,
+          "yearsOfExperience": 2,
+          "projects": 10
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "DevOps & Cloud",
+      "icon": "cloud",
+      "skills": [
+        {
+          "name": "AWS",
+          "level": 87,
+          "yearsOfExperience": 3,
+          "projects": 16
+        },
+        {
+          "name": "Docker",
+          "level": 90,
+          "yearsOfExperience": 4,
+          "projects": 25
+        },
+        {
+          "name": "CI/CD",
+          "level": 88,
+          "yearsOfExperience": 3,
+          "projects": 20
+        },
+        {
+          "name": "Vercel",
+          "level": 92,
+          "yearsOfExperience": 3,
+          "projects": 22
+        },
+        {
+          "name": "Nginx",
+          "level": 80,
+          "yearsOfExperience": 3,
+          "projects": 12
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Tools & Others",
+      "icon": "wrench",
+      "skills": [
+        {
+          "name": "Git",
+          "level": 95,
+          "yearsOfExperience": 6,
+          "projects": 50
+        },
+        {
+          "name": "Figma",
+          "level": 78,
+          "yearsOfExperience": 3,
+          "projects": 25
+        },
+        {
+          "name": "Jest",
+          "level": 85,
+          "yearsOfExperience": 3,
+          "projects": 18
+        },
+        {
+          "name": "Webpack",
+          "level": 82,
+          "yearsOfExperience": 4,
+          "projects": 15
+        },
+        {
+          "name": "Agile/Scrum",
+          "level": 90,
+          "yearsOfExperience": 5,
+          "projects": 30
+        }
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Developer - Associate",
+      "issuer": "Amazon Web Services",
+      "date": "2023-06",
+      "credentialId": "AWS-12345"
+    },
+    {
+      "name": "Professional Scrum Master I",
+      "issuer": "Scrum.org",
+      "date": "2022-11",
+      "credentialId": "PSM-67890"
+    }
+  ]
+}
