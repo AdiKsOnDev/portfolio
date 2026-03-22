@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import { getProjectBySlug, getProjectSlug, getProjects } from "@/lib/data";
 import { DefaultProjectLayout } from "@/components/features";
 import type { Metadata } from "next";
-import type { ComponentType } from "react";
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>;
@@ -33,12 +32,5 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     notFound();
   }
 
-  try {
-    const customPage = await import(`../custom/${slug}/page.tsx`) as {
-      default: ComponentType<{ project: typeof project }>;
-    };
-    return <customPage.default project={project} />;
-  } catch {
-    return <DefaultProjectLayout project={project} />;
-  }
+  return <DefaultProjectLayout project={project} />;
 }
