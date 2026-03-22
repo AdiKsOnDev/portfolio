@@ -39,3 +39,13 @@ export async function getPostBySlug(slug: string): Promise<BlogData | undefined>
   const module = await moduleFn();
   return module.default as BlogData;
 }
+
+export function getLatestPostsSync(limit?: number): BlogPost[] {
+  const posts = (blogsIndex as BlogIndex).posts
+    .filter((p) => !p.featured)
+    .sort(
+      (a, b) =>
+        new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+    );
+  return limit ? posts.slice(0, limit) : posts;
+}
