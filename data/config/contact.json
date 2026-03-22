@@ -1,0 +1,12 @@
+{
+  "availability": {
+    "status": "Available",
+    "message": "Available for a quick meeting to discuss anything",
+    "responseTime": "~2 Hours"
+  },
+  "preferredContact": "email",
+  "workingHours": {
+    "timezone": "GST (GMT+4)",
+    "hours": "08:00-22:00"
+  }
+}
