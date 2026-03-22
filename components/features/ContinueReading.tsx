@@ -23,9 +23,6 @@ export function ContinueReading({ posts, currentSlug }: ContinueReadingProps) {
               href={`/blog/${post.slug}`}
               className="group block"
             >
-              <span className="text-xs uppercase tracking-wider text-accent mb-1 block">
-                {post.category}
-              </span>
               <span className="text-sm font-serif text-foreground group-hover:text-accent transition-colors">
                 {post.title}
               </span>
