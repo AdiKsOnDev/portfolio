@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { FadeIn } from "@/components/ui";
 import type { Project } from "@/types";
 
 interface FeaturedProjectProps {
@@ -11,8 +14,8 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
     <section className="bg-muted py-16">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-          <div className="lg:col-span-3">
-            <div className="aspect-video bg-foreground/5 border border-muted-border mb-6 flex items-center justify-center overflow-hidden">
+          <FadeIn delay={0} className="lg:col-span-3">
+            <div className="aspect-video bg-foreground/5 border border-muted-border mb-6 flex items-center justify-center overflow-hidden transition-all duration-300 hover:border-accent/50">
               {project.image ? (
                 <img
                   src={project.image}
@@ -40,7 +43,7 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
                   href={project.links.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-accent text-sm font-sans inline-flex items-center gap-2 hover:underline"
+                  className="text-accent text-sm font-sans inline-flex items-center gap-2 hover:underline transition-all duration-300"
                 >
                   <span className="text-xs">&lt;&gt;</span>
                   Repository
@@ -48,10 +51,10 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
                 </a>
               )}
             </div>
-          </div>
+          </FadeIn>
 
-          <div className="lg:col-span-2">
-            <div className="bg-card border border-muted-border p-6">
+          <FadeIn delay={150} className="lg:col-span-2">
+            <div className="bg-card border border-muted-border p-6 transition-all duration-300 hover:border-accent/50">
               <div className="flex items-start justify-between mb-6">
                 <span className="text-xs uppercase tracking-wider text-accent">
                   {project.category}
@@ -83,7 +86,7 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
                 </div>
               </dl>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>
