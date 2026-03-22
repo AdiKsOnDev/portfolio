@@ -49,3 +49,16 @@ export function getLatestPostsSync(limit?: number): BlogPost[] {
     );
   return limit ? posts.slice(0, limit) : posts;
 }
+
+export function getBlogCategoriesSync(): { name: string; count: number }[] {
+  const posts = (blogsIndex as BlogIndex).posts;
+  const categoryCounts: Record<string, number> = {};
+
+  posts.forEach((post) => {
+    categoryCounts[post.category] = (categoryCounts[post.category] || 0) + 1;
+  });
+
+  return Object.entries(categoryCounts)
+    .map(([name, count]) => ({ name, count }))
+    .sort((a, b) => b.count - a.count);
+}
