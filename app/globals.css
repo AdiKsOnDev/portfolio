@@ -14,6 +14,20 @@
   --code-foreground: #E8E4DE;
 }
 
+.dark {
+  --background: #1A1A18;
+  --foreground: #F5F2ED;
+  --accent: #D4543A;
+  --accent-foreground: #FFFFFF;
+  --secondary: #9B9B95;
+  --muted: #2A2A28;
+  --muted-border: #3A3A38;
+  --card: #2A2A28;
+  --card-foreground: #F5F2ED;
+  --code-bg: #121212;
+  --code-foreground: #E8E4DE;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -34,6 +48,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 ::selection {

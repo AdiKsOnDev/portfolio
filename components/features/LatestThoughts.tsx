@@ -48,16 +48,13 @@ export function LatestThoughts() {
 
           <FadeIn delay={200}>
             <div className="bg-card border border-muted-border overflow-hidden transition-all duration-300">
-              <div className="aspect-square relative">
-                {posts.map((post) => (
-                  <img
-                    key={post.slug}
-                    src={post.coverImage}
-                    alt={post.title}
-                    className={"absolute inset-0 object-cover transition-opacity duration-200 " + (post === activePost ? "opacity-100" : "opacity-0")}
-                  />
-                ))}
-              </div>
+              {activePost?.coverImage && (
+                <img
+                  src={activePost.coverImage}
+                  alt={activePost.title}
+                  className="inset-0 aspect-[4/3] object-cover"
+                />
+              )}
             </div>
           </FadeIn>
         </div>

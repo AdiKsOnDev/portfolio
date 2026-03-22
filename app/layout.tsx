@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Header, Footer } from "@/components/layouts";
+import { ThemeProvider } from "@/components/ui";
 import "./globals.css";
 
 const styreneSans = localFont({
@@ -96,9 +97,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${styreneSans.variable} ${tiemposSerif.variable}`}>
       <body className="min-h-screen flex flex-col antialiased">
-        <Header />
-        <main className="flex-1 pt-16">{children}</main>
-        <Footer />
+        <ThemeProvider>
+          <Header />
+          <main className="flex-1 pt-16">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
