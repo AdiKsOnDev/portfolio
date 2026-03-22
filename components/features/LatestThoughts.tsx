@@ -16,12 +16,12 @@ export function LatestThoughts() {
     <section className="bg-muted py-24">
       <div className="max-w-6xl mx-auto px-6">
         <FadeIn>
-          <span className="text-xs uppercase tracking-wider text-accent font-sans mb-8 block">
+          <span className="text-xs uppercase tracking-wider text-accent font-sans block mb-8">
             Latest Thoughts
           </span>
         </FadeIn>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <FadeIn delay={100}>
             <div className="space-y-8">
               {posts.map((post) => (
@@ -54,7 +54,7 @@ export function LatestThoughts() {
                     key={post.slug}
                     src={post.coverImage}
                     alt={post.title}
-                    className={"absolute inset-0 w-full h-full object-cover transition-opacity duration-200 " + (post === activePost ? "opacity-100" : "opacity-0")}
+                    className={"absolute inset-0 object-cover transition-opacity duration-200 " + (post === activePost ? "opacity-100" : "opacity-0")}
                   />
                 ))}
               </div>
