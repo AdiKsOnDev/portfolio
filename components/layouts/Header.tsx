@@ -20,7 +20,7 @@ export function Header() {
           href="/"
           className="font-serif text-lg text-foreground hover:text-accent transition-colors"
         >
-          Adil Alizada
+          Adil
         </Link>
 
         <div className="flex items-center gap-8">

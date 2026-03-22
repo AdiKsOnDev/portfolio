@@ -83,7 +83,7 @@ const tiemposSerif = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Adil Alizada | Full-Stack Engineer",
+  title: "Adil | Full-Stack Engineer",
   description:
     "Full-Stack Engineer @ Sentiment.AI - Building systems with precision and intent.",
 };
