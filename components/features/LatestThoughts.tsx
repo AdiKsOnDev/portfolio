@@ -16,7 +16,7 @@ export function LatestThoughts() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           <div className="lg:col-span-1 flex lg:flex-col items-center lg:items-start gap-4">
-            <span className="text-xs uppercase tracking-wider text-accent font-sans lg:writing-mode-vertical [writing-mode:vertical-rl] rotate-180">
+            <span className="text-xs uppercase tracking-wider text-accent font-sans lg:writing-mode-vertical lg:[writing-mode:vertical-rl] lg:rotate-180">
               Latest Thoughts
             </span>
             <div className="hidden lg:block w-px h-8 bg-muted-border lg:order-first" />
