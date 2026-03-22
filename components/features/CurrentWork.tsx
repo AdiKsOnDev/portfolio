@@ -1,5 +1,5 @@
 import { getFeaturedProject } from "@/lib/data";
-import { Github, FileText } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 
 export function CurrentWork() {
   const project = getFeaturedProject();
@@ -15,7 +15,7 @@ export function CurrentWork() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="font-serif text-3xl lg:text-6xl text-foreground mb-4">
+            <h2 className="font-serif text-3xl lg:text-4xl text-foreground mb-4">
               {project.title}
             </h2>
             <p className="text-secondary text-sm leading-relaxed mb-8">
@@ -40,34 +40,30 @@ export function CurrentWork() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 border border-foreground text-foreground px-6 py-3 text-sm uppercase tracking-wider hover:bg-foreground hover:text-background transition-colors"
                 >
-                  <FileText className="w-4 h-4" />
+                  <ExternalLink className="w-4 h-4" />
                   Documentation
                 </a>
               )}
             </div>
           </div>
 
-          <div className="bg-code-bg rounded-lg overflow-hidden">
-            <div className="flex items-center gap-2 px-4 py-3 border-b border-foreground/20">
-              <span className="w-3 h-3 rounded-full bg-[#E06C75]" />
-              <span className="w-3 h-3 rounded-full bg-[#E5C07B]" />
-              <span className="w-3 h-3 rounded-full bg-[#98C379]" />
-              <span className="ml-4 text-xs text-secondary font-mono">
-                src/compositor/mod.rs
+          <div className="bg-card border border-muted-border overflow-hidden">
+            {project.image ? (
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-auto"
+              />
+            ) : (
+              <div className="aspect-video flex items-center justify-center bg-muted">
+                <span className="text-secondary text-sm uppercase">Preview</span>
+              </div>
+            )}
+            <div className="p-4 border-t border-muted-border">
+              <span className="text-xs text-secondary font-mono">
+                {project.tags.slice(0, 3).join(" / ")}
               </span>
             </div>
-            <pre className="p-6 text-sm font-mono overflow-x-auto">
-              <code className="text-code-foreground">
-                {`impl WaylandSurface for Compositor {
-  fn commit(&mut self) -> Result<(), Error> {
-    let frame = self.swap_chain
-      .acquire()?;
-    self.renderer
-      .draw_frame(frame)
-  }
-}`}
-              </code>
-            </pre>
           </div>
         </div>
       </div>
