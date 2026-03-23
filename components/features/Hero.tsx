@@ -1,12 +1,10 @@
 "use client";
 
-import { getProfile, getContact } from "@/lib/data";
-import { MapPin, Clock } from "lucide-react";
+import { getProfile } from "@/lib/data";
 import { FadeIn } from "@/components/ui";
 
 export function Hero() {
   const profile = getProfile();
-  const contact = getContact();
 
   return (
     <section className="max-w-6xl mx-auto px-6 py-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -22,25 +20,12 @@ export function Hero() {
       </FadeIn>
 
       <FadeIn delay={150}>
-        <div className="space-y-4">
-          <div className="bg-card p-6 border border-muted-border transition-all duration-300 hover:border-accent/50">
-            <span className="flex items-center gap-2 text-xs uppercase tracking-wider text-accent font-sans mb-2">
-              <MapPin className="w-4 h-4" />
-              Location
-            </span>
-            <span className="font-serif text-lg text-foreground">
-              {profile.location}
-            </span>
-          </div>
-          <div className="bg-card p-6 border border-muted-border transition-all duration-300 hover:border-accent/50">
-            <span className="flex items-center gap-2 text-xs uppercase tracking-wider text-accent font-sans mb-2">
-              <Clock className="w-4 h-4" />
-              Status
-            </span>
-            <span className="font-serif italic text-lg text-foreground">
-              {contact.availability.message}
-            </span>
-          </div>
+        <div className="hidden lg:flex justify-center">
+          <img
+            src="/logo.png"
+            alt="Adil Alizada Logo"
+            className="w-full max-w-[420px] h-auto"
+          />
         </div>
       </FadeIn>
     </section>
