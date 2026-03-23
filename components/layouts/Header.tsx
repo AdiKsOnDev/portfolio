@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Github, Mail } from "lucide-react";
+import { useState } from "react";
+import { Github, Mail, Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/ui";
 import { getProfile } from "@/lib/data";
 
@@ -13,6 +14,7 @@ const navLinks = [
 ];
 
 export function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const profile = getProfile();
 
@@ -26,7 +28,8 @@ export function Header() {
           {profile.name}
         </Link>
 
-        <div className="flex items-center gap-6">
+        {/* Desktop nav */}
+        <div className="hidden md:flex items-center gap-6">
           <div className="flex items-center gap-6">
             {navLinks.map((link) => {
               const isActive =
@@ -68,7 +71,60 @@ export function Header() {
             </a>
           </div>
         </div>
+
+        {/* Mobile menu button */}
+        <button
+          className="md:hidden p-2 text-secondary hover:text-foreground transition-colors"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+        >
+          {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+        </button>
       </nav>
+
+      {/* Mobile menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-background border-t border-muted-border">
+          <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-4">
+            {navLinks.map((link) => {
+              const isActive =
+                pathname === link.href ||
+                (link.href !== "/" && pathname.startsWith(link.href));
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`text-sm font-sans transition-colors ${
+                    isActive ? "text-accent" : "text-secondary hover:text-foreground"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+            <div className="flex items-center gap-4 pt-4 border-t border-muted-border">
+              <ThemeToggle />
+              <a
+                href={profile.social.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary hover:text-foreground transition-colors"
+                aria-label="GitHub"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+              <a
+                href={`mailto:${profile.email}`}
+                className="text-secondary hover:text-foreground transition-colors"
+                aria-label="Email"
+              >
+                <Mail className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
