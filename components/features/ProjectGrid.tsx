@@ -8,10 +8,10 @@ import type { Project } from "@/types";
 
 function ProjectCard({ project, delay }: { project: Project; delay: number }) {
   return (
-    <FadeIn delay={delay}>
+    <FadeIn delay={delay} className="flex h-full">
       <Link
         href={`/projects/${getProjectSlug(project)}`}
-        className="group bg-card border border-muted-border p-6 flex flex-col hover:border-accent/50 transition-all duration-300"
+        className="group bg-card border border-muted-border p-6 flex flex-col h-full hover:border-accent/50 transition-all duration-300"
       >
         <div className="flex items-start justify-between mb-4">
           <h3 className="font-serif text-xl text-foreground group-hover:text-accent transition-colors">
