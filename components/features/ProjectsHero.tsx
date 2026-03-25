@@ -16,7 +16,7 @@ export function ProjectsHero() {
         </h1>
       </FadeIn>
       <FadeIn delay={100}>
-        <p className="text-secondary text-sm max-w-2xl">
+        <p className="font-serif italic text-secondary text-lg max-w-2xl">
           {inProgressProject
             ? inProgressProject.description
             : "A selection of systems programming, web development, and open source projects."}

@@ -18,7 +18,8 @@ export default async function BlogPage() {
     <>
       <section className="max-w-6xl mx-auto px-6 pt-24 pb-12">
         <h1 className="font-serif text-5xl lg:text-6xl text-foreground mb-4">
-          My brain dump
+          Written with{" "} 
+          <span className="italic text-accent">Honesty.</span>
         </h1>
         <p className="font-serif italic text-secondary text-lg max-w-2xl">
           Anything I think about or learn during work—goes here. Sometimes I rant,
