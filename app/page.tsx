@@ -1,4 +1,4 @@
-import { Hero, CurrentWork, SelectedWorks, LatestThoughts } from "@/components/features";
+import { Hero, CurrentWork, SelectedWorks, LatestThoughts, Contact } from "@/components/features";
 
 export default function HomePage() {
   return (
@@ -7,6 +7,7 @@ export default function HomePage() {
       <CurrentWork />
       <SelectedWorks />
       <LatestThoughts />
+      <Contact />
     </>
   );
 }

@@ -2,6 +2,7 @@ export { Hero } from "./Hero";
 export { CurrentWork } from "./CurrentWork";
 export { SelectedWorks } from "./SelectedWorks";
 export { LatestThoughts } from "./LatestThoughts";
+export { Contact } from "./Contact";
 export { ProjectsHero } from "./ProjectsHero";
 export { FeaturedProject } from "./FeaturedProject";
 export { ProjectGrid } from "./ProjectGrid";
