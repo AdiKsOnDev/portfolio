@@ -9,7 +9,10 @@ export function CopyButton({ rssUrl }: { rssUrl: string }) {
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText(rssUrl);
+      const fullUrl = rssUrl.startsWith("http")
+        ? rssUrl
+        : `${window.location.origin}${rssUrl}`;
+      await navigator.clipboard.writeText(fullUrl);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {

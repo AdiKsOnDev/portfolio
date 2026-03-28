@@ -93,6 +93,11 @@ export const metadata: Metadata = {
       { url: "/favicon.png", type: "image/png", sizes: "32x32" },
     ],
   },
+  alternates: {
+    types: {
+      "application/rss+xml": `${process.env.NEXT_PUBLIC_SITE_URL || "https://adilalizada.com"}/feed.xml`,
+    },
+  },
 };
 
 export default function RootLayout({
