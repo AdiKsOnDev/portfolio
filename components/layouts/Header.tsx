@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Github, Mail, Menu, X } from "lucide-react";
+import { Github, Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/ui";
 import { getProfile } from "@/lib/data";
 
@@ -62,13 +62,6 @@ export function Header() {
             >
               <Github className="w-5 h-5" />
             </a>
-            <a
-              href={`mailto:${profile.email}`}
-              className="text-secondary hover:text-foreground transition-colors"
-              aria-label="Email"
-            >
-              <Mail className="w-5 h-5" />
-            </a>
           </div>
         </div>
 
@@ -113,13 +106,6 @@ export function Header() {
                 aria-label="GitHub"
               >
                 <Github className="w-5 h-5" />
-              </a>
-              <a
-                href={`mailto:${profile.email}`}
-                className="text-secondary hover:text-foreground transition-colors"
-                aria-label="Email"
-              >
-                <Mail className="w-5 h-5" />
               </a>
             </div>
           </div>
