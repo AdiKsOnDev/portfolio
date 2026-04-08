@@ -2,7 +2,6 @@ export interface Profile {
   name: string;
   title: string;
   location: string;
-  email: string;
   bio: string;
   avatar: string;
   social: {
