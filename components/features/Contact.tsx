@@ -5,7 +5,7 @@ import { getContact } from "@/lib/data";
 import { Mail } from "lucide-react";
 import { FadeIn, useNotification } from "@/components/ui";
 
-const ENCODED_EMAIL = "YWRpbC1ibG9nLm11bWJsaW5nMDYyQHBhc3NtYWlsLmNvbQ==";
+const ENCODED_EMAIL = "YWRpbC1ibG9nLmRpc2FycmF5OTg2QHBhc3NtYWlsLm5ldAo=";
 
 const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@.";
 const PLACEHOLDER = "I am not a Scraper";
