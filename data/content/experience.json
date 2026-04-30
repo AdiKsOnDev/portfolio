@@ -3,7 +3,7 @@
     {
       "id": "1",
       "company": "Sentiment AI",
-      "position": "Full-Stack Engineer",
+      "position": "Backend Developer",
       "location": "Dubai, United Arab Emirates",
       "type": "Full-time",
       "startDate": "2025-10",
@@ -13,16 +13,16 @@
       "responsibilities": [
         "Moderated version control via GitHub repositories and performed extensive Pull Request (PR) reviews",
         "Architected and developed scalable database infrastructure handling 1M+ records for enterprise ontology management",
-        "Built high-performance REST API with Flask achieving sub-100ms response times for standard queries",
-        "Developed comprehensive TypeScript frontend with React for intuitive data visualization and management",
-        "Implemented CI/CD pipelines, Docker containerization, and comprehensive testing strategies",
+        "Built, tested and documented high-performance RESTful API with Flask achieving sub-100ms response times for standard queries",
+        "Implemented well-structured CI/CD pipelines, Docker containerization, and comprehensive testing strategies",
         "Designed and optimized complex database schemas with PostgreSQL and SQLAlchemy for hierarchical data relationships",
-        "Made AI agents that help the company build better software and help customers talk to their data"
+        "Developed comprehensive TypeScript frontend with React for intuitive data visualization and management",
+        "Designed AI agents that help the company build better software and help customers talk to their data"
       ],
-      "technologies": ["Python", "TypeScript", "Next.JS", "Flask", "PostgreSQL", "SQLAlchemy", "Docker", "CI/CD", "AWS"],
+      "technologies": ["Python", "Flask", "PostgreSQL", "SQLAlchemy", "Docker", "CI/CD", "AWS", "TypeScript", "Next.JS"],
       "achievements": [
         "Proposed and developed a product that eliminated client dependency on third-party consultants, resulting in 100% revenue increase from the account",
-        "Successfully delivered complete Ontology System with database, API, and UI components",
+        "Successfully delivered complete Ontological System with database, API, CI/CD that helped for seemless integration for new clients",
         "Enabled seamless client integration with zero downtime through robust data model design",
         "Achieved real-time data access and updates across the entire platform"
       ]
