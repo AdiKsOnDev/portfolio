@@ -12,3 +12,5 @@ export { ArticleList } from "./ArticleList";
 export { ContinueReading } from "./ContinueReading";
 export { SidebarWidgets, CopyButton, TaxonomyWidget, LatestCommitsWidget } from "./SidebarWidgets";
 export { PostMetadata, TableOfContents } from "./PostSidebar";
+export { ExperienceHero } from "./ExperienceHero";
+export { ExperienceTimeline } from "./ExperienceTimeline";
