@@ -54,7 +54,7 @@ function FeaturedProjectCard({ project, delay }: { project: Project; delay: numb
             {project.description}
           </p>
           <span className="inline-flex items-center gap-2 text-accent text-sm font-sans group-hover:underline">
-            Read Case Study
+            Read More
             <ArrowUpRight className="w-4 h-4" />
           </span>
         </div>
