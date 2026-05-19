@@ -1,6 +1,35 @@
 {
-  "projects": [
-  {
+"projects": [
+    {
+      "id": "4",
+      "title": "Ontology REST API",
+      "description": "High-performance RESTful API for SaaS access to the Ontology DB with comprehensive endpoints and 99.9% uptime (Traced via Sentry).",
+      "longDescription": "Developed a production-grade APIthat exposes the ontology database through a clean, well-documented REST interface. Implements advanced features including query optimization, tracing with Sentry, caching and its invalidation, authentication, and rate limiting. Supports complex filteringwhile maintaining sub-50ms response times for standard queries.",
+      "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
+      "tags": [
+        "Python",
+        "SQLAlchemy",
+        "OpenAPI Docs",
+        "PostgreSQL",
+        "Docker",
+        "Sentry Monitoring"
+      ],
+      "category": "Enterprise Software",
+      "status": "completed",
+      "year": 2026,
+      "client": "SentimentAI LLC",
+      "duration": "2 months",
+      "role": "Full-Stack Engineer",
+      "links": {
+        "documentation": "https://core-api.sentiment-ai.co.uk/docs"
+      },
+      "metrics": {
+        "users": "Restricted",
+        "performance": "<100ms response",
+        "impact": "Main Revenue Driver @ SentimentAI"
+      }
+    },
+    {
       "id": "0",
       "title": "StarComp",
       "description": "Modern tiling Wayland compositor built in Rust using the Smithay library for high-performance window management.",
@@ -117,7 +146,7 @@
       }
     },
     {
-      "id": "4",
+      "id": "5",
       "title": "Ontology Database Layer",
       "description": "Scalable database infrastructure for enterprise ontology management, handling 1M+ records for client integration.",
       "longDescription": "Built the foundational database layer for SentimentAI's ontology system. An ontology is a structured framework that defines relationships between concepts and entities. This system enables seamless integration of new clients into the company's project ecosystem by providing a robust, scalable data model that handles complex hierarchical relationships and supports rapid client onboarding with zero downtime.",
@@ -140,32 +169,6 @@
         "users": "Restricted",
         "performance": "1M+ records",
         "impact": "Seamless client integration"
-      }
-    },
-    {
-      "id": "5",
-      "title": "Ontology REST API",
-      "description": "High-performance RESTful API for ontology management with comprehensive endpoints and real-time data access.",
-      "longDescription": "Developed a production-grade FastAPI service that exposes the ontology database through a clean, well-documented REST interface. Implements advanced features including query optimization, caching strategies, authentication, and rate limiting. Supports complex filtering, pagination, and bulk operations while maintaining sub-100ms response times for standard queries.",
-      "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
-      "tags": [
-        "Python",
-        "FastAPI",
-        "REST API",
-        "PostgreSQL",
-        "Docker"
-      ],
-      "category": "Enterprise Software",
-      "status": "completed",
-      "year": 2025,
-      "client": "SentimentAI LLC",
-      "duration": "2 months",
-      "role": "Full-Stack Engineer",
-      "links": {},
-      "metrics": {
-        "users": "Restricted",
-        "performance": "< 100ms response",
-        "impact": "Real-time data access"
       }
     },
     {

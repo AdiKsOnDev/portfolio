@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, Github, ExternalLink } from "lucide-react";
+import { ArrowLeft, Github, ExternalLink, BookOpen } from "lucide-react";
 import type { Project } from "@/types";
 
 interface DefaultProjectLayoutProps {
@@ -73,6 +73,17 @@ export function DefaultProjectLayout({ project }: DefaultProjectLayoutProps) {
               >
                 <ExternalLink className="w-4 h-4" />
                 Live Demo
+              </a>
+            )}
+            {project.links.documentation && (
+              <a
+                href={project.links.documentation}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 border border-muted-border text-secondary px-6 py-3 text-xs uppercase tracking-wider hover:border-accent/50 hover:text-foreground transition-colors"
+              >
+                <BookOpen className="w-4 h-4" />
+                Documentation
               </a>
             )}
           </div>
