@@ -84,9 +84,9 @@ const tiemposSerif = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Adil | Full-Stack Engineer",
+  title: "Adil | Backend Engineer",
   description:
-    "Full-Stack Engineer @ Sentiment.AI - Building systems with precision and intent.",
+    "Backend Engineer @ Sentiment.AI - Building systems with precision and intent.",
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
