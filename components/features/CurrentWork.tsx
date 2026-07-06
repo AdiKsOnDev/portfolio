@@ -60,7 +60,8 @@ export function CurrentWork() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-auto"
+                  loading="lazy"
+                  className="w-full aspect-video object-cover"
                 />
               ) : (
                 <div className="aspect-video flex items-center justify-center bg-muted">
