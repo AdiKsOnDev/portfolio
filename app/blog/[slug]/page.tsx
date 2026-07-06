@@ -1,12 +1,13 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import ReactMarkdown from "react-markdown";
 import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
-import { getPostBySlug, getAllPosts, getLatestPostsSync } from "@/lib/data";
+import { getAllPosts, getLatestPostsSync } from "@/lib/data";
+import { getPostBySlug } from "@/lib/data/blog-content.server";
 import { extractHeadings, type Heading } from "@/lib/utils";
 import { ContinueReading } from "@/components/features";
 import { PostMetadata, TableOfContents } from "@/components/features/PostSidebar";
+import { BlogMarkdown } from "@/components/blog/BlogMarkdown";
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -39,12 +40,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const allPosts = getLatestPostsSync();
   const headings: Heading[] = extractHeadings(post.content || "");
-
-  const slugify = (text: string) =>
-    text
-      .toLowerCase()
-      .replace(/\s+/g, "-")
-      .replace(/[^\w-]+/g, "");
 
   return (
     <article className="max-w-6xl mx-auto px-6 pt-24 pb-16">
@@ -86,83 +81,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           )}
 
-          <div className="prose prose-lg max-w-none">
-            <ReactMarkdown
-              components={{
-                h2: ({ children }) => {
-                  const text = String(children);
-                  const id = slugify(text);
-                  return (
-                    <h2 id={id} className="font-serif text-2xl text-foreground mt-12 mb-6 scroll-mt-24">
-                      {children}
-                    </h2>
-                  );
-                },
-                h3: ({ children }) => {
-                  const text = String(children);
-                  const id = slugify(text);
-                  return (
-                    <h3 id={id} className="font-serif text-xl text-foreground mt-8 mb-4 scroll-mt-24">
-                      {children}
-                    </h3>
-                  );
-                },
-                p: ({ children }) => (
-                  <p className="text-foreground leading-relaxed mb-6">
-                    {children}
-                  </p>
-                ),
-                code: ({ children, className }) => {
-                  const isInline = !className;
-                  if (isInline) {
-                    return (
-                      <code className="bg-code-bg text-accent px-2 py-1 text-sm font-mono">
-                        {children}
-                      </code>
-                    );
-                  }
-                  return (
-                    <code className="block bg-code-bg text-code-foreground p-6 rounded-lg overflow-x-auto text-sm font-mono my-6">
-                      {children}
-                    </code>
-                  );
-                },
-                ul: ({ children }) => (
-                  <ul className="list-disc list-inside space-y-2 mb-6 text-secondary">
-                    {children}
-                  </ul>
-                ),
-                ol: ({ children }) => (
-                  <ol className="list-decimal list-inside space-y-2 mb-6 text-secondary">
-                    {children}
-                  </ol>
-                ),
-                li: ({ children }) => (
-                  <li className="text-foreground">{children}</li>
-                ),
-                blockquote: ({ children }) => (
-                  <blockquote className="border-l-4 border-accent pl-6 my-6 italic text-secondary">
-                    {children}
-                  </blockquote>
-                ),
-                a: ({ href, children }) => (
-                  <a
-                    href={href}
-                    className="text-accent hover:underline"
-                    target={href?.startsWith("http") ? "_blank" : undefined}
-                    rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
-                  >
-                    {children}
-                  </a>
-                ),
-                strong: ({ children }) => (
-                  <strong className="font-semibold text-foreground">{children}</strong>
-                ),
-              }}
-            >
-              {post.content || ""}
-            </ReactMarkdown>
-          </div>
+          <BlogMarkdown content={post.content || ""} />
 
           <div className="flex flex-wrap gap-2 mt-12 pt-8 border-t border-muted-border">
             {post.tags.map((tag) => (

@@ -1,14 +1,9 @@
 import blogsIndex from "@/data/content/blogs/index.json";
-import type { BlogPost, BlogIndex, BlogData } from "@/types";
+import type { BlogPost, BlogIndex } from "@/types";
 
-function getBlogFiles() {
-  return {
-    "commit-committed-or-was-committed": () =>
-      import("@/data/content/blogs/commit-committed-or-was-committed.json"),
-    "genai-is-supposed-to-be-convenient": () =>
-      import("@/data/content/blogs/genai-is-supposed-to-be-convenient.json"),
-  };
-}
+// Full post content (the `content` field) is loaded from disk in a server-only
+// module — see lib/data/blog-content.server.ts (getPostBySlug). Keeping fs out
+// of this file lets client components import the index-based helpers below.
 
 export async function getBlogIndex(): Promise<BlogIndex> {
   return blogsIndex as BlogIndex;
@@ -30,14 +25,6 @@ export async function getLatestPosts(limit?: number): Promise<BlogPost[]> {
         new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
     );
   return limit ? posts.slice(0, limit) : posts;
-}
-
-export async function getPostBySlug(slug: string): Promise<BlogData | undefined> {
-  const blogFiles = getBlogFiles();
-  const moduleFn = blogFiles[slug as keyof typeof blogFiles];
-  if (!moduleFn) return undefined;
-  const module = await moduleFn();
-  return module.default as BlogData;
 }
 
 export function getLatestPostsSync(limit?: number): BlogPost[] {
