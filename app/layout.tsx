@@ -39,8 +39,13 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col antialiased">
         <ThemeProvider>
           <NotificationProvider>
+            <a href="#main-content" className="skip-link">
+              Skip to content
+            </a>
             <Header />
-            <main className="flex-1 pt-16">{children}</main>
+            <main id="main-content" className="flex-1 pt-16">
+              {children}
+            </main>
             <Footer />
           </NotificationProvider>
         </ThemeProvider>
