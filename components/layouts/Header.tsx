@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Github, Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/ui";
 import { getProfile } from "@/lib/data";
@@ -16,11 +16,25 @@ const navLinks = [
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const profile = getProfile();
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-muted-border">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md transition-shadow duration-300 ${
+        scrolled
+          ? "border-b border-muted-border shadow-sm"
+          : "border-b border-transparent"
+      }`}
+    >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link
           href="/"
