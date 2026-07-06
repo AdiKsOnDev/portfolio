@@ -2,8 +2,8 @@
   "posts": [
     {
       "id": "1771440238111",
-      "slug": "commit-committed-or-was-committed",
       "title": "Commit, Committed, or was Committed?",
+      "slug": "commit-committed-or-was-committed",
       "excerpt": "All the ways I have written my commits and the compromises I found",
       "coverImage": "https://i.ibb.co/Ng5T3ZFG/Slide-16-9-4.png",
       "publishedAt": "2026-02-18",

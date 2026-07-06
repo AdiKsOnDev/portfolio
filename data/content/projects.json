@@ -1,5 +1,5 @@
 {
-"projects": [
+  "projects": [
     {
       "id": "4",
       "title": "Ontology REST API",
@@ -49,8 +49,7 @@
       "client": "Open Source",
       "duration": "Ongoing",
       "role": "Creator & Maintainer",
-      "links": {
-      },
+      "links": {},
       "metrics": {
         "users": "In Development",
         "performance": "N/A",
@@ -108,7 +107,8 @@
       "duration": "<1 Month",
       "role": "Creator & Maintainer",
       "links": {
-        "github": "https://github.com/AdiKsOnDev/dashboard"
+        "github": "https://github.com/AdiKsOnDev/dashboard",
+        "demo": "https://adiksondev.github.io/dashboard"
       },
       "metrics": {
         "users": "Template",
