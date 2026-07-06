@@ -286,42 +286,54 @@ export function MotionHero() {
         }}
       />
 
-      <div className="relative mx-auto w-full max-w-6xl px-6 py-20">
-        <p className="mb-6 font-mono text-xs uppercase tracking-[0.25em] text-accent animate-[fadeIn_0.6s_ease-out]">
-          {"// "}
-          {profile.title.split("@")[1]?.trim()
-            ? `Backend Engineer @ ${profile.title.split("@")[1].trim()}`
-            : "Backend Engineer"}
-        </p>
+      <div className="relative mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 px-6 py-20 lg:grid-cols-2 lg:gap-16">
+        <div>
+          <p className="mb-6 font-mono text-xs uppercase tracking-[0.25em] text-accent animate-[fadeIn_0.6s_ease-out]">
+            {"// "}
+            {profile.title.split("@")[1]?.trim()
+              ? `Backend Engineer @ ${profile.title.split("@")[1].trim()}`
+              : "Backend Engineer"}
+          </p>
 
-        <h1 className="font-serif text-5xl font-bold leading-[1.05] text-foreground sm:text-7xl lg:text-8xl">
-          {profile.name}
-        </h1>
+          <h1 className="font-serif text-5xl font-bold leading-[1.05] text-foreground sm:text-7xl lg:text-8xl">
+            {profile.name}
+          </h1>
 
-        <p className="mt-6 font-mono text-lg text-secondary sm:text-2xl">
-          <span className="text-accent">&gt;</span>{" "}
-          <span className="text-foreground">{typed}</span>
-          <span aria-hidden="true" className="terminal-cursor" />
-        </p>
+          <p className="mt-6 font-mono text-lg text-secondary sm:text-2xl">
+            <span className="text-accent">&gt;</span>{" "}
+            <span className="text-foreground">{typed}</span>
+            <span aria-hidden="true" className="terminal-cursor" />
+          </p>
 
-        <p className="mt-8 max-w-xl text-secondary leading-relaxed">
-          Software built with stability in mind
-        </p>
+          <p className="mt-8 max-w-xl text-secondary leading-relaxed">
+            Software built with stability in mind
+          </p>
 
-        <div className="mt-10 flex flex-wrap items-center gap-4">
-          <Link
-            href="/projects"
-            className="group inline-flex items-center gap-2 bg-accent px-6 py-3 text-sm uppercase tracking-wider text-accent-foreground transition-transform duration-300 hover:scale-[1.02]"
-          >
-            View Work
-            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </Link>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 border border-foreground px-6 py-3 text-sm uppercase tracking-wider text-foreground transition-colors duration-300 hover:bg-foreground hover:text-background"
-          >
-            Get in touch
-          </a>
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <Link
+              href="/projects"
+              className="group inline-flex items-center gap-2 bg-accent px-6 py-3 text-sm uppercase tracking-wider text-accent-foreground transition-transform duration-300 hover:scale-[1.02]"
+            >
+              View Work
+              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 border border-foreground px-6 py-3 text-sm uppercase tracking-wider text-foreground transition-colors duration-300 hover:bg-foreground hover:text-background"
+            >
+              Get in touch
+            </a>
+          </div>
+        </div>
+
+        <div className="hidden justify-end lg:flex">
+          <img
+            src="/logo.png"
+            alt="Adil Alizada Logo"
+            width={420}
+            height={420}
+            className="h-auto w-full max-w-[360px] animate-[fadeIn_0.8s_ease-out]"
+          />
         </div>
       </div>
 
