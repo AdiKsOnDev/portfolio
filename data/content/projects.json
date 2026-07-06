@@ -4,7 +4,7 @@
       "id": "4",
       "title": "Ontology REST API",
       "description": "High-performance RESTful API for SaaS access to the Ontology DB with comprehensive endpoints and 99.9% uptime (Traced via Sentry).",
-      "longDescription": "Developed a production-grade APIthat exposes the ontology database through a clean, well-documented REST interface. Implements advanced features including query optimization, tracing with Sentry, caching and its invalidation, authentication, and rate limiting. Supports complex filteringwhile maintaining sub-50ms response times for standard queries.",
+      "longDescription": "Developed a production-grade API that exposes the ontology database through a clean, well-documented REST interface. Implements advanced features including query optimization, tracing with Sentry, caching and its invalidation, authentication, and rate limiting. Supports complex filteringwhile maintaining sub-50ms response times for standard queries.",
       "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
       "tags": [
         "Python",
