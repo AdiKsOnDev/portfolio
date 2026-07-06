@@ -44,7 +44,7 @@ function FeaturedProjectCard({ project, delay }: { project: Project; delay: numb
     <FadeIn delay={delay}>
       <Link
         href={`/projects/${getProjectSlug(project)}`}
-        className="group bg-muted border border-muted-border p-8 flex flex-col lg:flex-row gap-8 items-start hover:border-accent/50 transition-all duration-300"
+        className="group bg-muted border border-muted-border p-8 flex flex-col lg:flex-row gap-8 lg:items-center hover:border-accent/50 transition-all duration-300"
       >
         <div className="flex-1">
           <h3 className="font-serif text-2xl text-foreground group-hover:text-accent transition-colors mb-3">
@@ -59,10 +59,11 @@ function FeaturedProjectCard({ project, delay }: { project: Project; delay: numb
           </span>
         </div>
         {project.image ? (
-          <div className="w-full lg:w-72 overflow-hidden">
+          <div className="w-full lg:w-80 aspect-video overflow-hidden flex-shrink-0 border border-muted-border">
             <img
               src={project.image}
               alt={project.title}
+              loading="lazy"
               className="w-full h-full object-cover"
             />
           </div>
@@ -78,6 +79,8 @@ function FeaturedProjectCard({ project, delay }: { project: Project; delay: numb
 
 export function SelectedWorks() {
   const projects = getCompletedProjects().slice(0, 4);
+  const gridProjects = projects.slice(0, 3);
+  const featured = projects[3];
 
   return (
     <section className="max-w-6xl mx-auto px-6 py-24">
@@ -87,17 +90,17 @@ export function SelectedWorks() {
         </h2>
       </FadeIn>
 
-      <div className="grid grid-cols-2 gap-6">
-        {projects.slice(0, 2).map((project, i) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {gridProjects.map((project, i) => (
           <ProjectCard key={project.id} project={project} delay={100 + i * 50} />
         ))}
       </div>
 
-      <div className="mt-6">
-        {projects.slice(2, 3).map((project, i) => (
-          <FeaturedProjectCard key={project.id} project={project} delay={200 + i * 50} />
-        ))}
-      </div>
+      {featured && (
+        <div className="mt-6">
+          <FeaturedProjectCard project={featured} delay={250} />
+        </div>
+      )}
     </section>
   );
 }
