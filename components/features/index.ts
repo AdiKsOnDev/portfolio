@@ -1,4 +1,5 @@
 export { Hero } from "./Hero";
+export { MotionHero } from "./MotionHero";
 export { CurrentWork } from "./CurrentWork";
 export { SelectedWorks } from "./SelectedWorks";
 export { LatestThoughts } from "./LatestThoughts";

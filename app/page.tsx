@@ -1,13 +1,17 @@
-import { Hero, CurrentWork, SelectedWorks, LatestThoughts, Contact } from "@/components/features";
+import { MotionHero, CurrentWork, SelectedWorks, LatestThoughts, Contact } from "@/components/features";
 
 export default function HomePage() {
   return (
     <>
-      <Hero />
-      <CurrentWork />
+      <MotionHero />
+      <div id="current-work" className="scroll-mt-16">
+        <CurrentWork />
+      </div>
       <SelectedWorks />
       <LatestThoughts />
-      <Contact />
+      <div id="contact" className="scroll-mt-16">
+        <Contact />
+      </div>
     </>
   );
 }
