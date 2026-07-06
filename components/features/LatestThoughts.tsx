@@ -47,13 +47,20 @@ export function LatestThoughts() {
           </FadeIn>
 
           <FadeIn delay={200}>
-            <div className="bg-card border border-muted-border overflow-hidden transition-all duration-300">
-              {activePost?.coverImage && (
+            <div className="hidden lg:block bg-card border border-muted-border overflow-hidden aspect-[4/3] transition-all duration-300">
+              {activePost?.coverImage ? (
                 <img
                   src={activePost.coverImage}
                   alt={activePost.title}
-                  className="inset-0 aspect-[4/3] object-cover"
+                  loading="lazy"
+                  className="w-full h-full object-cover"
                 />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center">
+                  <span className="text-secondary text-xs uppercase tracking-wider">
+                    {activePost?.title ?? "Preview"}
+                  </span>
+                </div>
               )}
             </div>
           </FadeIn>
