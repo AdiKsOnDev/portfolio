@@ -34,36 +34,37 @@ export function TableOfContents({ headings }: TableOfContentsProps) {
   if (headings.length === 0) return null;
 
   return (
-    <div>
+    <nav aria-label="Table of contents">
       <h4 className="text-xs uppercase tracking-wider text-secondary mb-4">
-        Table of Contents
+        On This Page
       </h4>
-      <ul className="space-y-2">
-        {headings.map((heading, index) => (
-          <li
-            key={heading.id}
-            className={`${
-              heading.level === 3 ? "pl-3" : ""
-            }`}
-          >
-            <button
-              onClick={() => {
-                const element = document.getElementById(heading.id);
-                element?.scrollIntoView({ behavior: "smooth" });
-                setActiveId(heading.id);
-              }}
-              className={`text-left text-sm transition-colors w-full ${
-                activeId === heading.id
-                  ? "text-accent underline"
-                  : "text-secondary hover:text-foreground"
-              }`}
-            >
-              {String(index + 1).padStart(2, "0")}. {heading.text}
-            </button>
-          </li>
-        ))}
+      <ul className="border-l border-muted-border">
+        {headings.map((heading) => {
+          const isActive = activeId === heading.id;
+          return (
+            <li key={heading.id}>
+              <button
+                onClick={() => {
+                  const element = document.getElementById(heading.id);
+                  element?.scrollIntoView({ behavior: "smooth" });
+                  setActiveId(heading.id);
+                }}
+                title={heading.text}
+                className={`-ml-px block w-full border-l-2 py-1.5 text-left text-sm leading-snug transition-colors line-clamp-2 ${
+                  heading.level === 3 ? "pl-7" : "pl-4"
+                } ${
+                  isActive
+                    ? "border-accent text-accent font-medium"
+                    : "border-transparent text-secondary hover:border-muted-border hover:text-foreground"
+                }`}
+              >
+                {heading.text}
+              </button>
+            </li>
+          );
+        })}
       </ul>
-    </div>
+    </nav>
   );
 }
 
