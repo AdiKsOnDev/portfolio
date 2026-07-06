@@ -48,6 +48,9 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  /* clip (not hidden) avoids creating a scroll container — and never put
+     overflow on <html>, which breaks position:fixed touch on iOS Safari. */
+  overflow-x: clip;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
