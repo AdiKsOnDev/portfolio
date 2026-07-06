@@ -13,9 +13,9 @@ export function Hero() {
           <img
             src="/logo.png"
             alt="Adil Alizada Logo"
-            width={420}
-            height={420}
-            className="w-44 sm:w-56 lg:w-full max-w-[420px] h-auto"
+            width={320}
+            height={320}
+            className="w-44 sm:w-56 lg:w-2/3 max-w-[420px] h-auto"
           />
         </div>
       </FadeIn>
