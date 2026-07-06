@@ -40,8 +40,8 @@
   --color-card-foreground: var(--card-foreground);
   --color-code-bg: var(--code-bg);
   --color-code-foreground: var(--code-foreground);
-  --font-serif: var(--font-testiempos), Georgia, serif;
-  --font-sans: var(--font-styrene), system-ui, sans-serif;
+  --font-serif: var(--font-montserrat), system-ui, sans-serif;
+  --font-sans: var(--font-montserrat), system-ui, sans-serif;
 }
 
 body {
@@ -49,6 +49,12 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
 }
 
 ::selection {

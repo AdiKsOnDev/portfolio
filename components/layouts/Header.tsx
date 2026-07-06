@@ -24,7 +24,7 @@ export function Header() {
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link
           href="/"
-          className="font-serif text-lg text-foreground hover:text-accent transition-colors"
+          className="font-serif text-lg font-bold text-foreground hover:text-accent transition-colors"
         >
           {profile.name}
         </Link>
@@ -40,7 +40,7 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-sm font-sans transition-colors relative ${
+                  className={`text-sm font-sans font-semibold transition-colors relative ${
                     isActive
                       ? "text-accent after:absolute after:bottom-[-4px] after:left-0 after:right-0 after:h-[2px] after:bg-accent"
                       : "text-secondary hover:text-foreground"
@@ -89,7 +89,7 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`text-sm font-sans transition-colors ${
+                  className={`text-sm font-sans font-semibold transition-colors ${
                     isActive ? "text-accent" : "text-secondary hover:text-foreground"
                   }`}
                 >
