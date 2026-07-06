@@ -50,6 +50,17 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
                   <ArrowUpRight className="w-4 h-4" />
                 </a>
               )}
+              {project.links.demo && (
+                <a
+                  href={project.links.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent text-sm font-sans inline-flex items-center gap-2 hover:underline transition-all duration-300"
+                >
+                  Live Demo
+                  <ArrowUpRight className="w-4 h-4" />
+                </a>
+              )}
             </div>
           </FadeIn>
 

@@ -39,12 +39,23 @@ export function CurrentWork() {
                     View Repository
                   </a>
                 )}
+                {project.links.demo && (
+                  <a
+                    href={project.links.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 border border-foreground text-foreground px-6 py-3 text-sm uppercase tracking-wider hover:bg-foreground hover:text-background transition-all duration-300"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    Live Demo
+                  </a>
+                )}
                 {project.links.documentation && (
                   <a
                     href={project.links.documentation}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 border border-foreground text-foreground px-6 py-3 text-sm uppercase tracking-wider hover:bg-foreground hover:text-background transition-all duration-300"
+                    className="inline-flex items-center gap-2 border border-muted-border text-secondary px-6 py-3 text-sm uppercase tracking-wider hover:border-accent/50 hover:text-foreground transition-all duration-300"
                   >
                     <ExternalLink className="w-4 h-4" />
                     Documentation
