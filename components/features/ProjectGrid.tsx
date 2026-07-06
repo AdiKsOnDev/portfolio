@@ -37,6 +37,12 @@ export function ProjectGrid() {
 
   return (
     <section className="max-w-6xl mx-auto px-6 py-16">
+      <FadeIn>
+        <h2 className="font-serif text-3xl text-foreground mb-12">
+          Other Projects
+        </h2>
+      </FadeIn>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, i) => (
           <ProjectCard key={project.id} project={project} delay={i * 50} />

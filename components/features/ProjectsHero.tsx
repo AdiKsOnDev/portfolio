@@ -12,7 +12,7 @@ export function ProjectsHero() {
       <FadeIn>
         <h1 className="font-serif text-5xl lg:text-6xl text-foreground mb-4">
           Engineered for{" "}
-          <span className="italic text-accent">Performance.</span>
+          <span className="italic text-accent">Stability.</span>
         </h1>
       </FadeIn>
       <FadeIn delay={100}>
