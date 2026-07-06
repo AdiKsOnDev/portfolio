@@ -118,10 +118,10 @@ export function Contact() {
           <FadeIn delay={300}>
             <button
               onClick={handleClick}
-              className="inline-flex items-center gap-3 bg-card border border-muted-border px-8 py-4 text-foreground hover:border-accent/50 hover:text-accent transition-all duration-300 group"
+              className="inline-flex max-w-full items-center gap-3 bg-card border border-muted-border px-5 py-4 sm:px-8 text-foreground hover:border-accent/50 hover:text-accent transition-all duration-300 group"
             >
-              <Mail className="w-5 h-5 text-accent" />
-              <span className="font-serif text-lg font-mono">
+              <Mail className="w-5 h-5 text-accent flex-shrink-0" />
+              <span className="min-w-0 text-base sm:text-lg font-mono text-left break-all">
                 {displayText}
               </span>
             </button>
