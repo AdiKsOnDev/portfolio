@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Github, Menu, X } from "lucide-react";
+import { Github, Menu, X, Wrench } from "lucide-react";
 import { ThemeToggle } from "@/components/ui";
 import { getProfile } from "@/lib/data";
 
@@ -77,6 +77,16 @@ export function Header() {
             >
               <Github className="w-5 h-5" />
             </a>
+            {process.env.NODE_ENV === "development" && (
+              <Link
+                href="/admin"
+                className="text-secondary hover:text-accent transition-colors"
+                aria-label="Admin (dev only)"
+                title="Admin (dev only)"
+              >
+                <Wrench className="w-5 h-5" />
+              </Link>
+            )}
           </div>
         </div>
 
