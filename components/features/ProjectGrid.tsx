@@ -11,21 +11,40 @@ function ProjectCard({ project, delay }: { project: Project; delay: number }) {
     <FadeIn delay={delay} className="flex h-full">
       <Link
         href={`/projects/${getProjectSlug(project)}`}
-        className="group bg-card border border-muted-border p-6 flex flex-col h-full hover:border-accent/50 transition-all duration-300"
+        className="group flex h-full flex-col overflow-hidden border border-muted-border bg-card transition-all duration-300 hover:border-accent/50"
       >
-        <div className="flex items-start justify-between mb-4">
-          <h3 className="font-serif text-xl text-foreground group-hover:text-accent transition-colors">
-            {project.title}
-          </h3>
-          <ArrowUpRight className="w-5 h-5 text-secondary group-hover:text-accent transition-colors flex-shrink-0" />
+        <div className="aspect-video overflow-hidden border-b border-muted-border bg-muted">
+          {project.image ? (
+            <img
+              src={project.image}
+              alt={project.title}
+              loading="lazy"
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          ) : (
+            <div className="flex h-full w-full items-center justify-center">
+              <span className="text-xs uppercase tracking-wider text-secondary">
+                {project.category}
+              </span>
+            </div>
+          )}
         </div>
-        <p className="text-secondary text-sm leading-relaxed flex-1">
-          {project.description}
-        </p>
-        <div className="mt-4 pt-4 border-t border-muted-border">
-          <span className="text-xs uppercase tracking-wider text-secondary">
-            {project.year}
-          </span>
+
+        <div className="flex flex-1 flex-col p-6">
+          <div className="mb-4 flex items-start justify-between">
+            <h3 className="font-serif text-xl text-foreground transition-colors group-hover:text-accent">
+              {project.title}
+            </h3>
+            <ArrowUpRight className="h-5 w-5 flex-shrink-0 text-secondary transition-colors group-hover:text-accent" />
+          </div>
+          <p className="flex-1 text-sm leading-relaxed text-secondary">
+            {project.description}
+          </p>
+          <div className="mt-4 border-t border-muted-border pt-4">
+            <span className="text-xs uppercase tracking-wider text-secondary">
+              {project.year}
+            </span>
+          </div>
         </div>
       </Link>
     </FadeIn>
