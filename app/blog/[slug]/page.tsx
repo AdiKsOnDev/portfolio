@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
-import { getAllPosts, getLatestPostsSync } from "@/lib/data";
+import { getAllPosts } from "@/lib/data";
 import { getPostBySlug } from "@/lib/data/blog-content.server";
 import { extractHeadings, type Heading } from "@/lib/utils";
 import { ContinueReading } from "@/components/features";
@@ -38,7 +38,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     notFound();
   }
 
-  const allPosts = getLatestPostsSync();
+  const allPosts = await getAllPosts();
   const headings: Heading[] = extractHeadings(post.content || "");
 
   return (
@@ -98,10 +98,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <aside className="lg:col-span-3 hidden lg:block">
           <div className="sticky top-24 space-y-6">
             <PostMetadata post={post} />
-            <ContinueReading posts={allPosts} currentSlug={post.slug} />
           </div>
         </aside>
       </div>
+
+      <ContinueReading posts={allPosts} currentSlug={post.slug} />
     </article>
   );
 }
