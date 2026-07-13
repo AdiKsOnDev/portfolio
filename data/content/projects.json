@@ -173,10 +173,10 @@
     },
     {
       "id": "6",
-      "title": "OES UI Platform",
+      "title": "OPM UI Platform",
       "description": "Modern TypeScript frontend for the Ontology Excellence System with intuitive data visualization and management.",
       "longDescription": "Built a comprehensive web application for managing and visualizing ontology data. Features include interactive dashboards, real-time updates, advanced filtering, and bulk operations. Implemented with React, TypeScript, and modern state management, providing a seamless user experience for complex data operations. Includes comprehensive testing, CI/CD integration, and Docker containerization.",
-      "image": "/assets/oes-ui.png",
+      "image": "https://i.ibb.co/7m1rSKj/image.png",
       "tags": [
         "TypeScript",
         "React",
@@ -202,7 +202,7 @@
       "title": "HyprValley",
       "description": "Arch Linux rice featuring 5 stunning themes (Space, Nature, Ocean, Sakura, Code-RED) for Hyprland window manager.",
       "longDescription": "A comprehensive Hyprland configuration with meticulously crafted themes that transform the Linux desktop experience. Each theme includes custom Waybar configurations, color schemes, wallpapers, and system integrations. Gained significant traction in the Linux community with 40 GitHub stars and 200+ upvotes on Reddit, demonstrating strong community appreciation for the aesthetic and functional design.",
-      "image": "/assets/hyprvalley.png",
+      "image": "https://i.ibb.co/GQ19g7Ym/image.png",
       "tags": [
         "Shell",
         "CSS",
@@ -259,7 +259,7 @@
       "title": "Gruvtopia",
       "description": "Hyprland rice with beautiful Gruvbox theme aesthetic for Arch Linux enthusiasts.",
       "longDescription": "A polished Hyprland configuration featuring the beloved Gruvbox color scheme. Includes custom shell scripts, CSS styling, and carefully curated system integrations that create a cohesive and visually appealing desktop environment. Designed for developers who appreciate the warm, retro aesthetic of Gruvbox while maintaining modern functionality.",
-      "image": "/assets/gruvtopia.png",
+      "image": "https://i.ibb.co/fLv4cvD/image.png",
       "tags": [
         "Shell",
         "CSS",
