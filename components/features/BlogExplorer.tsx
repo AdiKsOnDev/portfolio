@@ -1,23 +1,33 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Rss, Check } from "lucide-react";
 import { ArticleList } from "./ArticleList";
 import type { BlogPost } from "@/types";
 
 interface BlogExplorerProps {
   posts: BlogPost[];
-  categories: { name: string; count: number }[];
   rssUrl: string;
 }
 
 /**
  * Client container for the blog listing: a filterable topic bar (+ RSS button)
- * above a category-filtered article grid.
+ * above a category-filtered article grid. Topics are derived from the posts on
+ * offer, so every chip always resolves to at least one article.
  */
-export function BlogExplorer({ posts, categories, rssUrl }: BlogExplorerProps) {
+export function BlogExplorer({ posts, rssUrl }: BlogExplorerProps) {
   const [active, setActive] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
+
+  const categories = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const post of posts) {
+      counts.set(post.category, (counts.get(post.category) ?? 0) + 1);
+    }
+    return [...counts.entries()]
+      .map(([name, count]) => ({ name, count }))
+      .sort((a, b) => b.count - a.count);
+  }, [posts]);
 
   const handleCopy = async () => {
     try {
