@@ -119,11 +119,4 @@ export interface BlogIndex {
   posts: BlogPost[];
 }
 
-export interface BlogData extends BlogPost {}
-
-export interface GitHubCommit {
-  message: string;
-  branch: string;
-  timestamp: string;
-  url: string;
-}
+export type BlogData = BlogPost;
