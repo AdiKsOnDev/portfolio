@@ -1,5 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeHighlight from "rehype-highlight";
 import { slugify } from "@/lib/utils";
 
 /**
@@ -11,6 +12,7 @@ export function BlogMarkdown({ content }: { content: string }) {
     <div className="blog-markdown max-w-none">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
+        rehypePlugins={[[rehypeHighlight, { detect: true, ignoreMissing: true }]]}
         components={{
           h1: ({ children }) => {
             const id = slugify(String(children));

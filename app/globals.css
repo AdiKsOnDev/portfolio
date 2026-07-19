@@ -133,3 +133,54 @@ h3 {
     scroll-behavior: auto !important;
   }
 }
+
+/* highlight.js syntax highlighting (XML and common languages) — tuned to the
+   dark code background used in both light and dark site themes. */
+.hljs-comment,
+.hljs-quote {
+  color: #8a857b;
+  font-style: italic;
+}
+.hljs-tag,
+.hljs-name,
+.hljs-selector-tag {
+  color: #de8b6f;
+}
+.hljs-attr,
+.hljs-attribute,
+.hljs-number,
+.hljs-meta,
+.hljs-link {
+  color: #d8a35a;
+}
+.hljs-string,
+.hljs-regexp,
+.hljs-addition {
+  color: #97b070;
+}
+.hljs-keyword,
+.hljs-built_in,
+.hljs-literal,
+.hljs-type,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: #c393c3;
+}
+.hljs-symbol,
+.hljs-bullet,
+.hljs-title,
+.hljs-section,
+.hljs-variable {
+  color: var(--accent);
+}
+.hljs-deletion {
+  color: #d9736f;
+}
+.hljs-emphasis {
+  font-style: italic;
+}
+.hljs-strong {
+  font-weight: 600;
+}
