@@ -2,6 +2,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
 import { slugify } from "@/lib/utils";
+import { remarkAdmonitions } from "@/lib/remark-admonitions";
 
 /**
  * Single source of truth for rendering blog Markdown. Used by the public post
@@ -11,7 +12,7 @@ export function BlogMarkdown({ content }: { content: string }) {
   return (
     <div className="blog-markdown max-w-none">
       <ReactMarkdown
-        remarkPlugins={[remarkGfm]}
+        remarkPlugins={[remarkGfm, remarkAdmonitions]}
         rehypePlugins={[[rehypeHighlight, { detect: true, ignoreMissing: true }]]}
         components={{
           h1: ({ children }) => {

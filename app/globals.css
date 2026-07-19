@@ -198,3 +198,52 @@ h3 {
 .hljs-strong {
   font-weight: 600;
 }
+
+/* GitHub-style admonition blocks (see lib/remark-admonitions.ts) */
+.admonition {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  background: var(--muted);
+  border: 1px solid var(--muted-border);
+  border-left-width: 4px;
+}
+.admonition > :last-child {
+  margin-bottom: 0;
+}
+.admonition-title {
+  margin-bottom: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.admonition-note {
+  border-left-color: #4a8fe0;
+}
+.admonition-note .admonition-title {
+  color: #4a8fe0;
+}
+.admonition-tip {
+  border-left-color: #3aa06b;
+}
+.admonition-tip .admonition-title {
+  color: #3aa06b;
+}
+.admonition-important {
+  border-left-color: #9a7ad1;
+}
+.admonition-important .admonition-title {
+  color: #9a7ad1;
+}
+.admonition-warning {
+  border-left-color: #d99a1c;
+}
+.admonition-warning .admonition-title {
+  color: #d99a1c;
+}
+.admonition-caution {
+  border-left-color: #dc5a52;
+}
+.admonition-caution .admonition-title {
+  color: #dc5a52;
+}
