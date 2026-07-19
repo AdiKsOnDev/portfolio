@@ -14,7 +14,7 @@ export function LatestThoughts() {
 
   return (
     <section className="bg-muted py-24">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6 text-center md:text-left">
         <FadeIn>
           <span className="text-xs uppercase tracking-wider text-accent font-sans block mb-8">
             Latest Thoughts

@@ -59,7 +59,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </aside>
 
         <div className="lg:col-span-7">
-          <header className="mb-12">
+          <header className="mb-12 text-center lg:text-left">
             <span className="text-xs uppercase tracking-wider text-accent mb-4 block">
               {post.category}
             </span>

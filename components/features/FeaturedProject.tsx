@@ -14,7 +14,7 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
     <section className="bg-muted py-16">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-          <FadeIn delay={0} className="lg:col-span-3">
+          <FadeIn delay={0} className="lg:col-span-3 text-center md:text-left">
             <div className="aspect-video bg-foreground/5 border border-muted-border mb-6 flex items-center justify-center overflow-hidden transition-all duration-300 hover:border-accent/50">
               {project.image ? (
                 <img
@@ -37,7 +37,7 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
             <p className="text-secondary text-sm mb-6">
               {project.description}
             </p>
-            <div className="flex gap-6">
+            <div className="flex gap-6 justify-center md:justify-start">
               {project.links.github && (
                 <a
                   href={project.links.github}

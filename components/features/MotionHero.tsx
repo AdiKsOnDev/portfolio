@@ -287,7 +287,7 @@ export function MotionHero() {
       />
 
       <div className="relative mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 px-6 py-20 lg:grid-cols-2 lg:gap-16">
-        <div>
+        <div className="text-center md:text-left">
           <p className="mb-6 font-mono text-xs uppercase tracking-[0.25em] text-accent animate-[fadeIn_0.6s_ease-out]">
             {"// "}
             {profile.title.split("@")[1]?.trim()
@@ -305,11 +305,11 @@ export function MotionHero() {
             <span aria-hidden="true" className="terminal-cursor" />
           </p>
 
-          <p className="mt-8 max-w-xl text-secondary leading-relaxed">
+          <p className="mt-8 max-w-xl mx-auto md:mx-0 text-secondary leading-relaxed">
             Software built with stability in mind
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center gap-4">
+          <div className="mt-10 flex flex-wrap items-center justify-center md:justify-start gap-4">
             <Link
               href="/projects"
               className="group inline-flex items-center gap-2 bg-accent px-6 py-3 text-sm uppercase tracking-wider text-accent-foreground transition-transform duration-300 hover:scale-[1.02]"

@@ -39,7 +39,7 @@ export function FeaturedArticle({ post }: FeaturedArticleProps) {
             )}
           </div>
 
-          <div>
+          <div className="text-center md:text-left">
             <div className="mb-3 text-sm text-secondary">
               {post.category} · {formatDate(post.publishedAt)}
             </div>

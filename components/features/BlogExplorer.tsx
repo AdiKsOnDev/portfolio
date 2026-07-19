@@ -55,7 +55,7 @@ export function BlogExplorer({ posts, rssUrl }: BlogExplorerProps) {
     <>
       <section className="max-w-6xl mx-auto px-6 pt-8">
         <div className="flex flex-col gap-5 border-y border-muted-border py-6 md:flex-row md:items-center md:justify-between">
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="flex flex-wrap items-center justify-center gap-2 md:justify-start">
             <button type="button" onClick={() => setActive(null)} className={chip(active === null)}>
               All
             </button>
@@ -80,7 +80,7 @@ export function BlogExplorer({ posts, rssUrl }: BlogExplorerProps) {
           <button
             type="button"
             onClick={handleCopy}
-            className="inline-flex flex-shrink-0 items-center gap-2 self-start border border-muted-border px-4 py-2 text-xs uppercase tracking-wider text-secondary transition-colors hover:border-accent/50 hover:text-foreground md:self-auto"
+            className="inline-flex flex-shrink-0 items-center gap-2 self-center border border-muted-border px-4 py-2 text-xs uppercase tracking-wider text-secondary transition-colors hover:border-accent/50 hover:text-foreground md:self-auto"
           >
             {copied ? (
               <Check className="h-4 w-4 text-accent" />

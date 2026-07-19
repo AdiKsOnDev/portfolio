@@ -85,7 +85,7 @@ export function SelectedWorks() {
   return (
     <section className="max-w-6xl mx-auto px-6 py-24">
       <FadeIn>
-        <h2 className="font-serif text-3xl text-foreground mb-12">
+        <h2 className="font-serif text-3xl text-foreground mb-12 text-center md:text-left">
           Selected Works
         </h2>
       </FadeIn>

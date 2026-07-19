@@ -11,7 +11,7 @@ export function CurrentWork() {
 
   return (
     <section className="bg-muted py-24">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6 text-center md:text-left">
         <FadeIn>
           <span className="text-xs uppercase tracking-wider text-accent font-sans mb-8 block">
             Current Work
@@ -27,7 +27,7 @@ export function CurrentWork() {
               <p className="text-secondary text-sm leading-relaxed mb-8">
                 {project.longDescription}
               </p>
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                 {project.links.github && (
                   <a
                     href={project.links.github}

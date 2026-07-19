@@ -8,7 +8,7 @@ export function ProjectsHero() {
   const inProgressProject = projects.find((p) => p.status === "in-progress");
 
   return (
-    <section className="max-w-6xl mx-auto px-6 py-24">
+    <section className="max-w-6xl mx-auto px-6 py-24 text-center md:text-left">
       <FadeIn>
         <h1 className="font-serif text-5xl lg:text-6xl text-foreground mb-4">
           Engineered for{" "}
@@ -16,7 +16,7 @@ export function ProjectsHero() {
         </h1>
       </FadeIn>
       <FadeIn delay={100}>
-        <p className="font-serif italic text-secondary text-lg max-w-2xl">
+        <p className="font-serif italic text-secondary text-lg max-w-2xl mx-auto md:mx-0">
           {inProgressProject
             ? inProgressProject.description
             : "A selection of systems programming, web development, and open source projects."}

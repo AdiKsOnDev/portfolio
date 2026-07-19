@@ -38,7 +38,7 @@ export function ContinueReading({ posts, currentSlug }: ContinueReadingProps) {
   if (!pick) return null;
 
   return (
-    <section className="mt-16 border-t border-muted-border pt-12">
+    <section className="mt-16 border-t border-muted-border pt-12 text-center sm:text-left">
       <h2 className="mb-8 text-xs uppercase tracking-wider text-accent">
         Continue Reading
       </h2>

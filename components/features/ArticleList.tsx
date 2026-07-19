@@ -14,7 +14,7 @@ export function ArticleList({ posts }: ArticleListProps) {
   return (
     <div>
       <FadeIn>
-        <span className="text-xs uppercase tracking-wider text-accent font-sans block mb-8">
+        <span className="text-xs uppercase tracking-wider text-accent font-sans block mb-8 text-center md:text-left">
           Latest Writing
         </span>
       </FadeIn>

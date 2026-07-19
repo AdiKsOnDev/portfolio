@@ -96,7 +96,7 @@ export function Contact() {
   return (
     <section className="py-24">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl mx-auto md:mx-0 text-center md:text-left">
           <FadeIn>
             <span className="text-xs uppercase tracking-wider text-accent font-sans mb-8 block">
               Contact

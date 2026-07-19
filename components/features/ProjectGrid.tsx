@@ -57,7 +57,7 @@ export function ProjectGrid() {
   return (
     <section className="max-w-6xl mx-auto px-6 py-16">
       <FadeIn>
-        <h2 className="font-serif text-3xl text-foreground mb-12">
+        <h2 className="font-serif text-3xl text-foreground mb-12 text-center md:text-left">
           Other Projects
         </h2>
       </FadeIn>

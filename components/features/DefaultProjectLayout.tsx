@@ -18,7 +18,7 @@ export function DefaultProjectLayout({ project }: DefaultProjectLayoutProps) {
       </Link>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-2 text-center md:text-left">
           <div className="aspect-video bg-muted border border-muted-border mb-8 flex items-center justify-center overflow-hidden">
             {project.image ? (
               <img
@@ -41,7 +41,7 @@ export function DefaultProjectLayout({ project }: DefaultProjectLayoutProps) {
             {project.longDescription}
           </p>
 
-          <div className="flex flex-wrap gap-2 mb-8">
+          <div className="flex flex-wrap gap-2 mb-8 justify-center md:justify-start">
             {project.tags.map((tag) => (
               <span
                 key={tag}
@@ -52,7 +52,7 @@ export function DefaultProjectLayout({ project }: DefaultProjectLayoutProps) {
             ))}
           </div>
 
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4 justify-center md:justify-start">
             {project.links.github && (
               <a
                 href={project.links.github}
