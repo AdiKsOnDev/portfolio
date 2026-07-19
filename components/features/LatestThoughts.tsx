@@ -9,7 +9,7 @@ import type { BlogPost } from "@/types";
 
 export function LatestThoughts() {
   const [hoveredPost, setHoveredPost] = useState<BlogPost | null>(null);
-  const posts = getLatestPostsSync(2);
+  const posts = getLatestPostsSync(3);
   const activePost = hoveredPost || posts[0];
 
   return (

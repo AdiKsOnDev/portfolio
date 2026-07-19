@@ -33,6 +33,23 @@
       ],
       "author": "Adil Alizada",
       "featured": false
+    },
+    {
+      "id": "1771440238112",
+      "slug": "wayland-surface-roles",
+      "title": "Wayland Surface Roles and their differences",
+      "excerpt": "wl_surface, xdg_surface, xdg_toplevel, xdg_popup, wl_subsurface, aren't all of them just surfaces? What are surface roles and why they are essential to a Wayland compositor.",
+      "coverImage": "https://i.ibb.co/Qv5T1yh1/Slide-16-9-7.png",
+      "publishedAt": "2026-07-19",
+      "readTime": "2 min read",
+      "category": "Development",
+      "tags": [
+        "Wayland",
+        "Linux",
+        "Concepts"
+      ],
+      "author": "Adil Alizada",
+      "featured": false
     }
   ]
 }
