@@ -126,7 +126,7 @@ export function BlogMarkdown({ content }: { content: string }) {
             />
           ),
           pre: ({ children }) => (
-            <pre className="my-6 overflow-x-auto rounded-lg bg-code-bg p-4 text-sm text-code-foreground">
+            <pre className="my-6 overflow-x-auto rounded-lg border border-muted-border bg-code-bg p-4 text-sm text-code-foreground">
               {children}
             </pre>
           ),
@@ -137,7 +137,7 @@ export function BlogMarkdown({ content }: { content: string }) {
               return <code className={`font-mono ${className ?? ""}`}>{children}</code>;
             }
             return (
-              <code className="rounded bg-code-bg px-1.5 py-0.5 font-mono text-sm text-accent">
+              <code className="rounded border border-muted-border bg-code-bg px-1.5 py-0.5 font-mono text-sm text-accent">
                 {children}
               </code>
             );

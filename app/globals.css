@@ -10,8 +10,15 @@
   --muted-border: #E8E4DE;
   --card: #EDEAE4;
   --card-foreground: #1A1A18;
-  --code-bg: #2A2A28;
-  --code-foreground: #E8E4DE;
+  --code-bg: #EAE6DF;
+  --code-foreground: #2A2A28;
+  /* syntax tokens — darker for contrast on the light code background */
+  --hl-comment: #7a756b;
+  --hl-tag: #b5482a;
+  --hl-attr: #93611b;
+  --hl-string: #4f6b34;
+  --hl-keyword: #8a4a8a;
+  --hl-deletion: #b5482a;
 }
 
 .dark {
@@ -26,6 +33,13 @@
   --card-foreground: #F5F2ED;
   --code-bg: #121212;
   --code-foreground: #E8E4DE;
+  /* syntax tokens — lighter for contrast on the dark code background */
+  --hl-comment: #8a857b;
+  --hl-tag: #de8b6f;
+  --hl-attr: #d8a35a;
+  --hl-string: #97b070;
+  --hl-keyword: #c393c3;
+  --hl-deletion: #d9736f;
 }
 
 @theme inline {
@@ -138,25 +152,25 @@ h3 {
    dark code background used in both light and dark site themes. */
 .hljs-comment,
 .hljs-quote {
-  color: #8a857b;
+  color: var(--hl-comment);
   font-style: italic;
 }
 .hljs-tag,
 .hljs-name,
 .hljs-selector-tag {
-  color: #de8b6f;
+  color: var(--hl-tag);
 }
 .hljs-attr,
 .hljs-attribute,
 .hljs-number,
 .hljs-meta,
 .hljs-link {
-  color: #d8a35a;
+  color: var(--hl-attr);
 }
 .hljs-string,
 .hljs-regexp,
 .hljs-addition {
-  color: #97b070;
+  color: var(--hl-string);
 }
 .hljs-keyword,
 .hljs-built_in,
@@ -166,7 +180,7 @@ h3 {
 .hljs-selector-class,
 .hljs-template-tag,
 .hljs-template-variable {
-  color: #c393c3;
+  color: var(--hl-keyword);
 }
 .hljs-symbol,
 .hljs-bullet,
@@ -176,7 +190,7 @@ h3 {
   color: var(--accent);
 }
 .hljs-deletion {
-  color: #d9736f;
+  color: var(--hl-deletion);
 }
 .hljs-emphasis {
   font-style: italic;
