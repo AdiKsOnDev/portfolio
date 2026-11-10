@@ -289,13 +289,6 @@ export function MotionHero() {
 
       <div className="relative mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 px-6 py-20 lg:grid-cols-2 lg:gap-16">
         <div className="text-center md:text-left">
-          <p className="mb-6 font-mono text-xs uppercase tracking-[0.25em] text-accent animate-[fadeIn_0.6s_ease-out]">
-            {"// "}
-            {profile.title.split("@")[1]?.trim()
-              ? `Backend Engineer @ ${profile.title.split("@")[1].trim()}`
-              : "Backend Engineer"}
-          </p>
-
           <h1 className="font-serif text-5xl font-bold leading-[1.05] text-foreground sm:text-7xl lg:text-8xl">
             {profile.name}
           </h1>
@@ -305,26 +298,6 @@ export function MotionHero() {
             <span className="text-foreground">{typed}</span>
             <span aria-hidden="true" className="terminal-cursor" />
           </p>
-
-          <p className="mt-8 max-w-xl mx-auto md:mx-0 text-secondary leading-relaxed">
-            Software built with stability in mind
-          </p>
-
-          <div className="mt-10 flex flex-wrap items-center justify-center md:justify-start gap-4">
-            <Link
-              href="/projects"
-              className="group inline-flex items-center gap-2 bg-accent px-6 py-3 text-sm uppercase tracking-wider text-accent-foreground transition-transform duration-300 hover:scale-[1.02]"
-            >
-              View Work
-              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </Link>
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 border border-foreground px-6 py-3 text-sm uppercase tracking-wider text-foreground transition-colors duration-300 hover:bg-foreground hover:text-background"
-            >
-              Get in touch
-            </a>
-          </div>
         </div>
 
         <div className="hidden justify-end lg:flex">

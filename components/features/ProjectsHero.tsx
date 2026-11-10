@@ -10,17 +10,9 @@ export function ProjectsHero() {
   return (
     <section className="max-w-6xl mx-auto px-6 py-24 text-center md:text-left">
       <FadeIn>
-        <h1 className="font-serif text-5xl lg:text-6xl text-foreground mb-4">
-          Engineered for{" "}
-          <span className="italic text-accent">Stability.</span>
+        <h1 className="font-serif text-6xl lg:text-8xl text-foreground mb-4">
+          Projects
         </h1>
-      </FadeIn>
-      <FadeIn delay={100}>
-        <p className="font-serif italic text-secondary text-lg max-w-2xl mx-auto md:mx-0">
-          {inProgressProject
-            ? inProgressProject.description
-            : "A selection of systems programming, web development, and open source projects."}
-        </p>
       </FadeIn>
     </section>
   );
