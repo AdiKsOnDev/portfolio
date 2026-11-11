@@ -5,67 +5,58 @@ import Image from "next/image";
 import Link from "next/link";
 import { getLatestPostsSync } from "@/lib/data";
 import { formatDate } from "@/lib/utils";
-import { FadeIn } from "@/components/ui";
 import type { BlogPost } from "@/types";
 
 export function LatestThoughts() {
   const [hoveredPost, setHoveredPost] = useState<BlogPost | null>(null);
+  const [focusedPost, setFocusedPost] = useState<BlogPost | null>(null);
   const posts = getLatestPostsSync(3);
-  const activePost = hoveredPost || posts[0];
+  const activePost = focusedPost || hoveredPost || posts[0];
+
+  if (!posts.length) return null;
 
   return (
-    <section className="bg-muted py-24">
-      <div className="max-w-6xl mx-auto px-6 text-center md:text-left">
-        <FadeIn>
-          <span className="text-xs uppercase tracking-wider text-accent font-sans block mb-8">
-            Latest Thoughts
-          </span>
-        </FadeIn>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <FadeIn delay={100}>
-            <div className="space-y-8">
-              {posts.map((post) => (
+    <section className="bg-neutral-surface py-16 sm:py-24" aria-labelledby="latest-thoughts-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <h2 id="latest-thoughts-heading" className="mb-10 font-serif text-3xl text-foreground sm:mb-14 sm:text-4xl">
+          Latest Thoughts
+        </h2>
+        <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
+          <ul className="space-y-10">
+            {posts.map((post) => (
+              <li key={post.slug}>
                 <Link
-                  key={post.slug}
                   href={`/blog/${post.slug}`}
                   className="group block"
                   onMouseEnter={() => setHoveredPost(post)}
                   onMouseLeave={() => setHoveredPost(null)}
+                  onFocus={() => setFocusedPost(post)}
+                  onBlur={() => setFocusedPost(null)}
                 >
-                  <h3 className="font-serif text-xl text-foreground group-hover:text-accent transition-colors mb-2">
+                  <h3 className="mb-3 font-serif text-2xl text-foreground underline-offset-8 group-hover:underline group-focus-visible:underline">
                     {post.title}
                   </h3>
-                  <p className="text-secondary text-sm italic mb-2">
+                  <p className="mb-3 text-base leading-relaxed text-foreground">
                     {post.excerpt}
                   </p>
-                  <span className="text-xs text-secondary">
+                  <time dateTime={post.publishedAt} className="text-sm text-foreground/75">
                     {formatDate(post.publishedAt)}
-                  </span>
+                  </time>
                 </Link>
-              ))}
+              </li>
+            ))}
+          </ul>
+          {activePost?.coverImage && (
+            <div className="relative hidden aspect-video lg:block">
+              <Image
+                src={activePost.coverImage}
+                alt={activePost.title}
+                fill
+                sizes="520px"
+                className="object-contain object-top"
+              />
             </div>
-          </FadeIn>
-
-          <FadeIn delay={200}>
-            <div className="relative hidden aspect-[4/3] overflow-hidden border border-muted-border bg-card transition-all duration-300 lg:block">
-              {activePost?.coverImage ? (
-                <Image
-                  src={activePost.coverImage}
-                  alt={activePost.title}
-                  fill
-                  sizes="50vw"
-                  className="object-cover"
-                />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center">
-                  <span className="text-secondary text-xs uppercase tracking-wider">
-                    {activePost?.title ?? "Preview"}
-                  </span>
-                </div>
-              )}
-            </div>
-          </FadeIn>
+          )}
         </div>
       </div>
     </section>
