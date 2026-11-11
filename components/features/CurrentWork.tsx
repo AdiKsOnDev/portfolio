@@ -1,10 +1,6 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { getFeaturedProject, getProjectSlug } from "@/lib/data";
-import { ArrowUpRight, Github, ExternalLink } from "lucide-react";
-import { FadeIn } from "@/components/ui";
 
 export function CurrentWork() {
   const project = getFeaturedProject();
@@ -12,91 +8,73 @@ export function CurrentWork() {
   if (!project) return null;
 
   return (
-    <section className="bg-muted py-24">
-      <div className="max-w-6xl mx-auto px-6 text-center md:text-left">
-        <FadeIn>
-          <span className="text-xs uppercase tracking-wider text-accent font-sans mb-8 block">
-            Current Work
-          </span>
-        </FadeIn>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <FadeIn delay={100}>
-            <div>
-              <h2 className="font-serif text-3xl lg:text-4xl text-foreground mb-4">
-                {project.title}
-              </h2>
-              <p className="text-secondary text-sm leading-relaxed mb-8">
-                {project.longDescription}
-              </p>
-              <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                <Link
-                  href={`/projects/${getProjectSlug(project)}`}
-                  className="inline-flex items-center gap-2 bg-accent px-4 py-2 text-xs uppercase tracking-wider text-accent-foreground transition-all duration-300 hover:scale-[1.02] hover:opacity-90"
+    <section className="bg-muted py-16 sm:py-20" aria-labelledby="current-work-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <h2 id="current-work-heading" className="mb-10 font-serif text-3xl text-foreground sm:mb-14 sm:text-4xl">
+          Current Work
+        </h2>
+        <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <h3 className="mb-4 font-serif text-2xl text-foreground">
+              {project.title}
+            </h3>
+            <p className="text-base leading-relaxed text-foreground">
+              {project.longDescription}
+            </p>
+            <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
+              <Link
+                href={`/projects/${getProjectSlug(project)}`}
+                className="inline-flex min-h-11 items-center bg-foreground px-5 py-3 text-base text-background transition-opacity hover:opacity-80"
+              >
+                View project
+              </Link>
+              {project.links.github && (
+                <a
+                  href={project.links.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-11 items-center text-base text-foreground underline underline-offset-4 transition-colors hover:text-accent"
                 >
-                  View Project
-                  <ArrowUpRight className="h-3.5 w-3.5" />
-                </Link>
-                {project.links.github && (
-                  <a
-                    href={project.links.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 border border-foreground px-6 py-3 text-sm uppercase tracking-wider text-foreground transition-colors duration-300 hover:bg-foreground hover:text-background"
-                  >
-                    <Github className="w-4 h-4" />
-                    View Repository
-                  </a>
-                )}
-                {project.links.demo && (
-                  <a
-                    href={project.links.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 border border-foreground text-foreground px-6 py-3 text-sm uppercase tracking-wider hover:bg-foreground hover:text-background transition-all duration-300"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    Live Demo
-                  </a>
-                )}
-                {project.links.documentation && (
-                  <a
-                    href={project.links.documentation}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 border border-muted-border text-secondary px-6 py-3 text-sm uppercase tracking-wider hover:border-accent/50 hover:text-foreground transition-all duration-300"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    Documentation
-                  </a>
-                )}
-              </div>
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={200}>
-            <div className="relative overflow-hidden border border-muted-border bg-card transition-all duration-300">
-              {project.image ? (
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={800}
-                  height={450}
-                  sizes="(max-width: 1024px) calc(100vw - 3rem), 50vw"
-                  className="aspect-video w-full object-cover"
-                />
-              ) : (
-                <div className="aspect-video flex items-center justify-center bg-muted">
-                  <span className="text-secondary text-sm uppercase">Preview</span>
-                </div>
+                  View repository
+                </a>
               )}
-              <div className="p-4 border-t border-muted-border">
-                <span className="text-xs text-secondary font-mono">
-                  {project.tags.slice(0, 3).join(" / ")}
-                </span>
-              </div>
+              {project.links.demo && (
+                <a
+                  href={project.links.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-11 items-center text-base text-foreground underline underline-offset-4 transition-colors hover:text-accent"
+                >
+                  Live demo
+                </a>
+              )}
+              {project.links.documentation && (
+                <a
+                  href={project.links.documentation}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-11 items-center text-base text-foreground underline underline-offset-4 transition-colors hover:text-accent"
+                >
+                  Documentation
+                </a>
+              )}
             </div>
-          </FadeIn>
+          </div>
+          <figure>
+            {project.image && (
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={800}
+                height={450}
+                sizes="(max-width: 1023px) calc(100vw - 3rem), 520px"
+                className="h-auto w-full"
+              />
+            )}
+            <figcaption className="mt-4 text-sm leading-relaxed text-secondary">
+              {project.tags.slice(0, 3).join(" / ")}
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>

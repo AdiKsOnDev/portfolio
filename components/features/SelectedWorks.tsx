@@ -1,107 +1,67 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import { getCompletedProjects, getProjectSlug } from "@/lib/data";
-import { FadeIn } from "@/components/ui";
-import type { Project } from "@/types";
-
-function ProjectCard({ project, delay }: { project: Project; delay: number }) {
-  return (
-    <FadeIn delay={delay}>
-      <Link
-        href={`/projects/${getProjectSlug(project)}`}
-        className="group block bg-card border border-muted-border p-6 hover:border-accent/50 transition-all duration-300 h-full"
-      >
-        <div className="flex flex-col h-full">
-          <div className="flex items-start justify-between mb-4">
-            <h3 className="font-serif text-xl text-foreground group-hover:text-accent transition-colors">
-              {project.title}
-            </h3>
-            <ArrowUpRight className="w-5 h-5 text-secondary group-hover:text-accent transition-colors flex-shrink-0" />
-          </div>
-          <p className="text-secondary text-sm leading-relaxed mb-4 flex-1">
-            {project.description}
-          </p>
-          <div className="flex flex-wrap gap-2 mt-auto">
-            {project.tags.slice(0, 3).map((tag) => (
-              <span
-                key={tag}
-                className="text-xs uppercase tracking-wider text-secondary border border-muted-border px-2 py-1"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      </Link>
-    </FadeIn>
-  );
-}
-
-function FeaturedProjectCard({ project, delay }: { project: Project; delay: number }) {
-  return (
-    <FadeIn delay={delay}>
-      <Link
-        href={`/projects/${getProjectSlug(project)}`}
-        className="group bg-muted border border-muted-border p-8 flex flex-col lg:flex-row gap-8 lg:items-center hover:border-accent/50 transition-all duration-300"
-      >
-        <div className="flex-1">
-          <h3 className="font-serif text-2xl text-foreground group-hover:text-accent transition-colors mb-3">
-            {project.title}
-          </h3>
-          <p className="text-secondary text-sm leading-relaxed mb-4">
-            {project.description}
-          </p>
-          <span className="inline-flex items-center gap-2 text-accent text-sm font-sans group-hover:underline">
-            Read More
-            <ArrowUpRight className="w-4 h-4" />
-          </span>
-        </div>
-        {project.image ? (
-          <div className="relative aspect-video w-full flex-shrink-0 overflow-hidden border border-muted-border lg:w-80">
-            <Image
-              src={project.image}
-              alt={project.title}
-              fill
-              sizes="(max-width: 1024px) calc(100vw - 7rem), 320px"
-              className="object-cover"
-            />
-          </div>
-        ) : (
-          <div className="w-full lg:w-48 h-32 bg-foreground/5 flex items-center justify-center">
-            <span className="text-secondary text-xs uppercase">Preview</span>
-          </div>
-        )}
-      </Link>
-    </FadeIn>
-  );
-}
 
 export function SelectedWorks() {
   const projects = getCompletedProjects().slice(0, 4);
-  const gridProjects = projects.slice(0, 3);
   const featured = projects[3];
 
   return (
-    <section className="max-w-6xl mx-auto px-6 py-24">
-      <FadeIn>
-        <h2 className="font-serif text-3xl text-foreground mb-12 text-center md:text-left">
-          Selected Works
-        </h2>
-      </FadeIn>
+    <section className="mx-auto max-w-6xl px-6 py-16 sm:py-24" aria-labelledby="selected-works-heading">
+      <h2 id="selected-works-heading" className="mb-10 font-serif text-3xl text-foreground sm:mb-14 sm:text-4xl">
+        Selected Works
+      </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {gridProjects.map((project, i) => (
-          <ProjectCard key={project.id} project={project} delay={100 + i * 50} />
+      <ul className="space-y-10 sm:space-y-12">
+        {projects.slice(0, 3).map((project) => (
+          <li key={project.id}>
+            <Link
+              href={`/projects/${getProjectSlug(project)}`}
+              className="group grid gap-3 md:grid-cols-[1fr_2fr] md:gap-12"
+            >
+              <h3 className="font-serif text-2xl text-foreground underline-offset-8 group-hover:underline group-focus-visible:underline">
+                {project.title}
+              </h3>
+              <div>
+                <p className="max-w-2xl text-base leading-relaxed text-foreground">
+                  {project.description}
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-secondary">
+                  {project.tags.slice(0, 3).join(" / ")}
+                </p>
+              </div>
+            </Link>
+          </li>
         ))}
-      </div>
+      </ul>
 
       {featured && (
-        <div className="mt-6">
-          <FeaturedProjectCard project={featured} delay={250} />
-        </div>
+        <Link
+          href={`/projects/${getProjectSlug(featured)}`}
+          className="group mt-14 grid items-center gap-8 bg-muted p-6 sm:p-10 lg:grid-cols-2 lg:gap-12"
+        >
+          <div>
+            <h3 className="mb-4 font-serif text-3xl text-foreground underline-offset-8 group-hover:underline group-focus-visible:underline">
+              {featured.title}
+            </h3>
+            <p className="text-base leading-relaxed text-foreground">
+              {featured.description}
+            </p>
+            <span className="mt-6 inline-block text-base text-foreground underline decoration-accent underline-offset-8">
+              Read more
+            </span>
+          </div>
+          {featured.image && (
+            <Image
+              src={featured.image}
+              alt={featured.title}
+              width={800}
+              height={450}
+              sizes="(max-width: 639px) calc(100vw - 6rem), (max-width: 1023px) calc(100vw - 8rem), 448px"
+              className="h-auto w-full"
+            />
+          )}
+        </Link>
       )}
     </section>
   );

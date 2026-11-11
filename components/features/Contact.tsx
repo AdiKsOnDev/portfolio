@@ -3,14 +3,14 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { getContact } from "@/lib/data";
 import { Mail, Copy, Check } from "lucide-react";
-import { FadeIn, useNotification } from "@/components/ui";
+import { useNotification } from "@/components/ui";
 
 // The address is kept base64-encoded in the source so scrapers don't harvest
 // it; it's only decoded in the browser when a visitor asks to see it.
 const ENCODED_EMAIL = "YWRpbC1ibG9nLmRpc2FycmF5OTg2QHBhc3NtYWlsLm5ldAo=";
 const SCRAMBLE_CHARS =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@._-";
-const PLACEHOLDER = "I am not a Scraper";
+const PLACEHOLDER = "Reveal & copy email";
 
 function decodeEmail(): string {
   try {
@@ -133,59 +133,50 @@ export function Contact() {
       : "Click again to copy";
 
   return (
-    <section className="py-24">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="max-w-2xl mx-auto md:mx-0 text-center md:text-left">
-          <FadeIn>
-            <span className="text-xs uppercase tracking-wider text-accent font-sans mb-8 block">
-              Contact
-            </span>
-          </FadeIn>
-
-          <FadeIn delay={100}>
-            <h2 className="font-serif text-4xl lg:text-5xl text-foreground mb-6">
-              Get in touch
-            </h2>
-          </FadeIn>
-
-          <FadeIn delay={200}>
-            <p className="text-secondary text-lg leading-relaxed mb-8">
+    <section className="bg-foreground py-20 text-background sm:py-28" aria-labelledby="contact-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
+          <h2 id="contact-heading" className="text-balance font-serif text-5xl leading-[1.05] tracking-tight sm:text-7xl">
+            Get in touch
+          </h2>
+          <div className="min-w-0">
+            <p className="mb-8 max-w-md text-xl leading-relaxed">
               {contact.availability.message}
             </p>
-          </FadeIn>
-
-          <FadeIn delay={300}>
             <button
               type="button"
               onClick={handleClick}
-              aria-label={revealed ? "Copy email address" : "Reveal email address"}
-              className="group inline-flex max-w-full items-center gap-3 border border-muted-border bg-card px-5 py-4 text-foreground transition-all duration-300 hover:border-accent/50 hover:text-accent sm:px-8"
+              aria-label={revealed ? "Copy email address" : "Reveal and copy email address"}
+              className="group flex w-full items-center gap-4 bg-background px-5 py-5 text-foreground transition-colors hover:bg-background/90 focus-visible:outline-background focus-visible:outline-offset-4 sm:px-6"
             >
-              <Mail className="h-5 w-5 flex-shrink-0 text-accent" />
-              <span className="min-w-0 break-all text-left font-mono text-base sm:text-lg">
+              <Mail aria-hidden="true" className="h-5 w-5 flex-shrink-0" />
+              <span className="min-w-0 flex-1 break-all text-left text-base sm:text-lg">
                 {revealed ? scrambled : PLACEHOLDER}
               </span>
               {revealed && (
-                <span className="flex-shrink-0 text-secondary transition-colors group-hover:text-accent">
+                <span className="flex-shrink-0">
                   {copied ? (
-                    <Check className="h-4 w-4 text-accent" />
+                    <Check aria-hidden="true" className="h-4 w-4" />
                   ) : (
-                    <Copy className="h-4 w-4" />
+                    <Copy aria-hidden="true" className="h-4 w-4" />
                   )}
                 </span>
               )}
             </button>
-          </FadeIn>
-
-          <FadeIn delay={400}>
-            <p className="mt-3 text-xs text-secondary" aria-live="polite">
+            <p className="mt-4 text-sm text-background/75" aria-live="polite">
               {hint}
             </p>
-            <div className="mt-4 text-xs text-secondary">
-              Response time: {contact.availability.responseTime} ·{" "}
-              {contact.workingHours.hours} ({contact.workingHours.timezone})
-            </div>
-          </FadeIn>
+            <dl className="mt-10 flex flex-wrap gap-x-10 gap-y-5 text-sm leading-relaxed">
+              <div>
+                <dt className="text-background/75">Response time</dt>
+                <dd className="mt-1">{contact.availability.responseTime}</dd>
+              </div>
+              <div>
+                <dt className="text-background/75">Working hours</dt>
+                <dd className="mt-1">{contact.workingHours.hours} ({contact.workingHours.timezone})</dd>
+              </div>
+            </dl>
+          </div>
         </div>
       </div>
     </section>
